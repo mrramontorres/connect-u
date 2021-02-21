@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "",
+    "password": "Vividosis123!",
     "database": "blogger",
     "host": "127.0.0.1",
     "port": 3306,
@@ -9,7 +9,7 @@
   },
   "test": {
     "username": "root",
-    "password": "",
+    "password": "Vividosis123!",
     "database": "connect_u_db",
     "host": "127.0.0.1",
     "port": 3306,
@@ -17,11 +17,11 @@
   },
   "production": {
     "username": "root",
-    "password": "",
+    "password": "Vividosis123!",
     "database": "connect_u_db",
     "host": "127.0.0.1",
     "port": 3306,
-    "use_env_variable":"JAWSDB_URL",
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
 }
