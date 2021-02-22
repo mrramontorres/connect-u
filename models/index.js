@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const Sequelize = require("sequelize");
+const { Sequelize } = require("sequelize");
 
 const basename = path.basename(module.filename);
 const env = process.env.NODE_ENV || "development";
@@ -26,7 +26,10 @@ fs.readdirSync(__dirname)
     );
   })
   .forEach((file) => {
-    const model = sequelize.import(path.join(__dirname, file));
+    const model = require(path.join(__dirname, file))(
+      sequelize,
+      Sequelize.DataTypes
+    );
     db[model.name] = model;
   });
 
