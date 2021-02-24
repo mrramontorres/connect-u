@@ -10,16 +10,20 @@ module.exports = (app) => {
     res.sendFile(path.join(__dirname, "../public/blog.html"))
   );
 
+  app.get("/blog", (req, res) =>
+    res.sendFile(path.join(__dirname, "../public/blog.html"))
+
+  );
+
   // second route loads second.html
-  app.get("/second", (req, res) =>
-    console.log("GET second html not read yet")
-  //  res.sendFile(path.join(__dirname, '../public/cms.html'))
+  app.get("/cms", (req, res) =>
+    //console.log("GET second html not read yet")
+    res.sendFile(path.join(__dirname, "../public/cms.html"))
   );
 
   // third route loads third.html
-  app.get("/third", (req, res) =>
-    console.log("GET third html not read yet")
-  //  res.sendFile(path.join(__dirname, '../public/cms.html'))
+  app.get("/authors", (req, res) =>
+    //console.log("GET third html not read yet")
+    res.sendFile(path.join(__dirname, "../public/author-manager.html"))
   );
-
 };
