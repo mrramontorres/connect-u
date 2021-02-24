@@ -7,7 +7,7 @@ const db = require("../models");
 module.exports = (app) => {
   app.get("/api/posts", (req, res) => {
     console.log("vc-api-routes activated");
-        const query = {};
+    const query = {};
     if (req.query.author_id) {
       query.AuthorId = req.query.author_id;
     }
