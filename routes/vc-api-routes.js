@@ -1,13 +1,13 @@
 // Dependencies
 
 // Requiring our models
-const db = require('../models/vc.js');
+const db = require("../models");
 
 // Routes
 module.exports = (app) => {
-  app.get('/api/posts', (req, res) => {
-    console.log("vc-api-routes activated")
-/*    const query = {};
+  app.get("/api/posts", (req, res) => {
+    console.log("vc-api-routes activated");
+        const query = {};
     if (req.query.author_id) {
       query.AuthorId = req.query.author_id;
     }
@@ -18,6 +18,6 @@ module.exports = (app) => {
       where: query,
       include: [db.Author],
     }).then((dbPost) => res.json(dbPost));
-*/
+
   });
-}
+};

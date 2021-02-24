@@ -1,5 +1,6 @@
+//require('dotenv').config();
+
 const express = require("express");
-require("dotenv").config();
 
 const htmlRouter = require("./routes/html-routes.js");
 const vcRouter = require("./routes/vc-api-routes.js");

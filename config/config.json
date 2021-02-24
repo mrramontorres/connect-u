@@ -1,9 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": "Vividosis123!",
-    "database": "connect_u_db",
-    "host": "localhost",
+    "password": "PW",
+    "database": "connet_u_DB",
+    "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql"
   },
@@ -16,12 +16,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "",
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "v5ziviqc2awed803",
+    "password": "m3ddhc3luons3rch",
+    "database": "kgihtqpl3b08p03d",
+    "host": "d6rii63wp64rsfb5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "port": 3306,
-    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
 }
