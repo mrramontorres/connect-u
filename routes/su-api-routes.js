@@ -1,13 +1,13 @@
 // Dependencies
 
 // Requiring our models
-const db = require('../models');
+const db = require("../models");
 
 // Routes
 module.exports = (app) => {
-  app.get('/api/posts', (req, res) => {
-    console.log("su-api-routes activated")
-   const query = {};
+  app.get("/api/posts", (req, res) => {
+    console.log("su-api-routes activated");
+    const query = {};
     if (req.query.startup_id) {
       query.StartupId = req.query.startup_id;
     }
@@ -20,4 +20,4 @@ module.exports = (app) => {
     }).then((dbStartup) => res.json(dbStartup));
 
   });
-}
+};
