@@ -7,8 +7,7 @@ module.exports = (app) => {
 
   // index route loads view.html
   app.get("/", (req, res) =>
-    console.log("GET index not read yet")
-  //  res.sendFile(path.join(__dirname, '../public/blog.html'))
+    res.sendFile(path.join(__dirname, '../public/blog.html'))
   );
 
   // second route loads second.html
