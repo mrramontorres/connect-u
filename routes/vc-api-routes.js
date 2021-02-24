@@ -1,7 +1,7 @@
 // Dependencies
 
 // Requiring our models
-const db = require('../models/vc.js');
+const db = require('../models');
 
 // Routes
 module.exports = (app) => {

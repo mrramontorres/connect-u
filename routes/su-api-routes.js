@@ -5,7 +5,7 @@ const db = require('../models');
 
 // Routes
 module.exports = (app) => {
-  app.get('/api/posts', (req, res) => {
+  app.get('/api/startups', (req, res) => {
     console.log("su-api-routes activated")
    const query = {};
     if (req.query.startup_id) {
