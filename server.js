@@ -1,23 +1,23 @@
-const express = require('express');
-require('dotenv').config();
+const express = require("express");
+require("dotenv").config();
 
-const htmlRouter = require('./routes/html-routes.js');
-const vcRouter = require('./routes/vc-api-routes.js');
-const suRouter = require('./routes/su-api-routes.js');
+const htmlRouter = require("./routes/html-routes.js");
+const vcRouter = require("./routes/vc-api-routes.js");
+const suRouter = require("./routes/su-api-routes.js");
 
 // Sets up the Express App
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8082;
 
 // Requiring our models for syncing
-const db = require('./models/vc.js');
+const db = require("./models");
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Static directory
-app.use(express.static('public'));
+app.use(express.static("public"));
 
 // Invoke routes
 htmlRouter(app);
