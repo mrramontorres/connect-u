@@ -35,3 +35,10 @@ CREATE TABLE interactions (
   interactionDate VARCHAR(30) NOT NULL,
   PRIMARY KEY (id)
 );
+
+CREATE TABLE post (
+  id INT NOT NULL AUTO_INCREMENT, 
+  title VARCHAR(60) NOT NULL,
+  body VARCHAR(180) NOT NULL, 
+  PRIMARY KEY (id)
+);

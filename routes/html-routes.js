@@ -21,7 +21,7 @@ module.exports = (app) => {
   );
 
   // third route loads third.html
-  app.get("/authors", (req, res) =>
+  app.get("/startups", (req, res) =>
     //console.log("GET third html not read yet")
     res.sendFile(path.join(__dirname, "../public/author-manager.html"))
   );
