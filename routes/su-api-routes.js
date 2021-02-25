@@ -14,9 +14,6 @@ module.exports = (app) => {
   });
   // Get route for retrieving startup data
   app.get("/api/startups/:id", (req, res) => {
-    // Here we add an "include" property to our options in our findOne query
-    // We set the value to an array of the models we want to include in a left outer join
-    // In this case, just db.Author
     db.Startup.findOne({
       where: {
         id: req.params.id,
@@ -24,27 +21,27 @@ module.exports = (app) => {
     }).then((dbStartup) => res.json(dbStartup));
   });
 
-  // POST route for saving a new post
+  // POST route for saving a new startup
   app.post("/api/", (req, res) => {
-    db.Post.create(req.body).then((dbPost) => res.json(dbPost));
+    db.Startup.create(req.body).then((dbStartup) => res.json(dbStartup));
   });
 
-  // DELETE route for deleting posts
-  app.delete("/api/posts/:id", (req, res) => {
-    db.Post.destroy({
+  // DELETE route for deleting a startup
+  app.delete("/api/startups/:id", (req, res) => {
+    db.Startup.destroy({
       where: {
         id: req.params.id,
       },
-    }).then((dbPost) => res.json(dbPost));
+    }).then((dbStartup) => res.json(dbStartup));
   });
 
-  // PUT route for updating posts
-  app.put("/api/posts", (req, res) => {
-    db.Post.update(req.body, {
+  // PUT route for updating startup information
+  app.put("/api/startups", (req, res) => {
+    db.Startup.update(req.body, {
       where: {
         id: req.body.id,
       },
-    }).then((dbPost) => res.json(dbPost));
+    }).then((dbStartup) => res.json(dbStartup));
   });
 
 };
