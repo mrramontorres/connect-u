@@ -361,6 +361,26 @@ background-color: #fff;
 
 /*----------------image card browser end ---------------*/
 
+/*------Hover middle braek-------------------------*/
+
+.callout-hover-reveal .callout-footer {
+  display: none;
+} 
+
+.notedotul {
+list-style-type: none;
+}
+
+/*------middle end-------------------------*/
+
+
+
+
+
+
+
+
+
 /*-------briowser table----*/
 
 
