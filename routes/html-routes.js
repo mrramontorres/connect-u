@@ -17,6 +17,11 @@ module.exports = (app) => {
 >>>>>>> a6af3a3596a3be0702f2149b9c4fff62b35ddfb2
   );
 
+  app.get("/blog", (req, res) =>
+    res.sendFile(path.join(__dirname, "../public/blog.html"))
+
+  );
+
   // second route loads second.html
   app.get("/cms", (req, res) =>
     //console.log("GET second html not read yet")

@@ -1,15 +1,9 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
-    "password": "MySQLTAS1",
-    "database": "connet_u_DB",
-    "host": "127.0.0.1",
-=======
     "password": "",
     "database": "connect_u_db",
     "host": "localhost",
->>>>>>> a6af3a3596a3be0702f2149b9c4fff62b35ddfb2
     "port": 3306,
     "dialect": "mysql"
   },
