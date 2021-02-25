@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS connet_u_DB;
+DROP DATABASE IF EXISTS connect_u_DB;
 
-CREATE DATABASE connet_u_DB;
+CREATE DATABASE connect_u_DB;
 
-USE connet_u_DB;
+USE connect_u_DB;
 
 CREATE TABLE vc_profile (
   id INT NOT NULL AUTO_INCREMENT,
