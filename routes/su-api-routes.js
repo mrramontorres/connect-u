@@ -5,13 +5,14 @@ const db = require("../models");
 
 // Routes
 module.exports = (app) => {
-  app.get("/api/startups", (req, res) => {
-    console.log("su-api-routes activated");
-    const query = {};
-    if (req.query.startup_id) {
-      query.StartupId = req.query.startup_id;
-    }
-  });
+  // app.get("/api/startups", (req, res) => {
+  //   console.log("su-api-routes activated");
+  //   const query = {};
+  //   if (req.query.startup_id) {
+  //     query.StartupId = req.query.startup_id;
+  //   }
+  // });
+
   // Get route for retrieving startup data
   app.get("/api/startups/:id", (req, res) => {
     db.Startup.findOne({
