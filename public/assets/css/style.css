@@ -133,7 +133,7 @@
     height: 800px;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url(puzzlehandrvsd4.png);
+    background-image: url("/assets/imgpuzzlehandrvsd4.png");
     background-position: center;
     background-size: cover;
     background-color: rgb(235, 246, 247);
@@ -180,19 +180,7 @@
   }
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   
   
   /*-----------login & signup page ------------*/
@@ -206,7 +194,7 @@
   .hero {
      height: 100%;
      width: 100%;
-     background-image:url(connect2.png);
+     background-image:url("assets/img/connect2.png");
      background-position: center;
      background-size: cover;
      /* justify-content: center; */
