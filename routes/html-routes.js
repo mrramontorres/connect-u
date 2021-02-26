@@ -12,6 +12,7 @@ module.exports = (app) => {
 
   app.get("/blog", (req, res) =>
     res.sendFile(path.join(__dirname, "../public/blog.html"))
+
   );
 
   // second route loads second.html
