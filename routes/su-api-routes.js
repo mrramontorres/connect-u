@@ -37,6 +37,7 @@ module.exports = (app) => {
   });
 
   // PUT route for updating startup information
+  // Grabs id
   app.put("/api/startups", (req, res) => {
     db.Startup.update(req.body, {
       where: {
@@ -45,3 +46,4 @@ module.exports = (app) => {
     }).then((dbStartup) => res.json(dbStartup));
   });
 };
+
