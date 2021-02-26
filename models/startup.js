@@ -65,6 +65,13 @@ module.exports = (sequelize, DataTypes) => {
     },
   });
 
+  Startup.associate = (models) => {
+    // Associating Author with Posts
+    // When an Author is deleted, also delete any associated Posts
+    Startup.hasMany(models.Post, {
+      onDelete: "cascade",
+    });
+  };
   //   Startup.associate = (models) => {
   //     // We're saying that a Post should belong to an Author
   //     // A Post can't be created without an Author due to the foreign key constraint

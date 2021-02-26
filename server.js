@@ -1,17 +1,17 @@
-//require('dotenv').config();
+require('dotenv').config();
 
 const express = require("express");
 
 const htmlRouter = require("./routes/html-routes.js");
 const vcRouter = require("./routes/vc-api-routes.js");
 const suRouter = require("./routes/su-api-routes.js");
-
+const postRouter = require("./routes/post-api-routes.js");
 // Sets up the Express App
 const app = express();
 const PORT = process.env.PORT || 8082;
 
 // Requiring our models for syncing
-const db = require('./models');
+const db = require("./models");
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -24,6 +24,7 @@ app.use(express.static("public"));
 htmlRouter(app);
 vcRouter(app);
 suRouter(app);
+postRouter(app);
 
 // Syncing our sequelize models and then starting our Express app
 db.sequelize.sync({ force: true }).then(() => {
