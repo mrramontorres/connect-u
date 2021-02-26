@@ -7,13 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // Variable to hold our posts
   let posts;
 
-  const getPosts = (author) => {
-    authorId = author || "";
-    if (authorId) {
-      authorId = `/?author_id=${authorId}`;
+  const getPosts = () => {
+    StartupId = startup || "";
+    if (StartupId) {
+      StartupId = `/?startup_id=${StartupId}`;
     }
 
-    fetch(`/api/posts${authorId}`, {
+    fetch(`/api/posts${StartupId}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -34,10 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Get a blog post from a specific author
   const url = window.location.search;
-  let authorId;
-  if (url.indexOf("?author_id=") !== -1) {
-    authorId = url.split("=")[1];
-    getPosts(authorId);
+  let startupId;
+  if (url.indexOf("?startup_id=") !== -1) {
+    StartupId = url.split("=")[1];
+    getPosts(StartupId);
   } else {
     getPosts();
   }
@@ -86,12 +86,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const newPostTitle = document.createElement("h2");
     const newPostDate = document.createElement("small");
-    const newPostAuthor = document.createElement("h5");
+    const newPostStartup = document.createElement("h5");
 
-    newPostAuthor.textContent = `Written by: ${post.Author.name}`;
-    newPostAuthor.style.float = "right";
-    newPostAuthor.style.color = "blue";
-    newPostAuthor.style.marginTop = "-10px";
+    newPostStartup.textContent = `Written by: ${post.Startup.name}`;
+    newPostStartup.style.float = "right";
+    newPostStartup.style.color = "blue";
+    newPostStartup.style.marginTop = "-10px";
 
     const newPostCardBody = document.createElement("div");
     newPostCardBody.classList.add("card-body");
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
     newPostCardHeading.append(deleteBtn);
     newPostCardHeading.append(editButton);
     newPostCardHeading.append(newPostTitle);
-    newPostCardHeading.append(newPostAuthor);
+    newPostCardHeading.append(newPostStartup);
     newPostCardBody.append(newPostBody);
     newPostCard.append(newPostCardHeading);
     newPostCard.append(newPostCardBody);
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const query = window.location.search;
     let partial = "";
     if (id) {
-      partial = ` for Author #${id}`;
+      partial = ` for Startup #${id}`;
     }
 
     blogContainer.innerHTML = "";

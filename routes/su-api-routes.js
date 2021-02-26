@@ -40,9 +40,8 @@ module.exports = (app) => {
   app.put("/api/startups", (req, res) => {
     db.Startup.update(req.body, {
       where: {
-        id: req.body.id,
+        id: req.params.id,
       },
     }).then((dbStartup) => res.json(dbStartup));
   });
-
 };
