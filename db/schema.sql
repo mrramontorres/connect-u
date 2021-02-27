@@ -4,15 +4,15 @@ CREATE DATABASE connect_u_DB;
 
 USE connect_u_DB;
 
-CREATE TABLE vc_profile (
+CREATE TABLE vc_profiles (
   id INT NOT NULL AUTO_INCREMENT,
-  vc_name VARCHAR(60) NOT NULL,
-  vc_website VARCHAR(100) NOT NULL,
-  vc_city VARCHAR(30) NOT NULL,
-  vc_state VARCHAR(10) NOT NULL,
-  vc_industries VARCHAR(60) NOT NULL,
-  vc_stage VARCHAR(20) NOT NULL,
-  vc_lead BOOLEAN NOT NULL,
+  vcName VARCHAR(60) NOT NULL,
+  vcWebsite VARCHAR(100) NOT NULL,
+  vcCity VARCHAR(30) NOT NULL,
+  vcState VARCHAR(10) NOT NULL,
+  vcIndustries VARCHAR(60) NOT NULL,
+  vcStage VARCHAR(20) NOT NULL,
+  vcLead BOOLEAN NOT NULL,
   PRIMARY KEY (id)
 );
 
