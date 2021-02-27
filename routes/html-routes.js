@@ -7,12 +7,11 @@ module.exports = (app) => {
 
   // index route loads view.html
   app.get("/", (req, res) =>
-    res.sendFile(path.join(__dirname, "../public/blog.html"))
+    res.sendFile(path.join(__dirname, "../views/blog.html"))
   );
 
   app.get("/blog", (req, res) =>
     res.sendFile(path.join(__dirname, "../public/blog.html"))
-
   );
 
   // second route loads second.html
