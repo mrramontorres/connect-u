@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Variable to hold our posts
   let posts;
 
-  const getPosts = () => {
+  const getPosts = (startup) => {
     StartupId = startup || "";
     if (StartupId) {
       StartupId = `/?startup_id=${StartupId}`;
@@ -42,24 +42,25 @@ document.addEventListener("DOMContentLoaded", () => {
         const newPostCardTitle = document.createElement("h2");
         newPostCardTitle.classList.add("card-title");
         newPostCardTitle.textContent = data.title;
-      });
 
-    const newPostStartup = document.createElement("h5");
+        const newPostStartup = document.createElement("h5");
 
-    newPostStartup.textContent = `Written by: ${post.Startup.name}`;
-    newPostStartup.style.float = "right";
-    newPostStartup.style.color = "blue";
-    newPostStartup.style.marginTop = "-10px";
+        newPostStartup.textContent = `Written by: ${post.Startup.name}`;
+        newPostStartup.style.float = "right";
+        newPostStartup.style.color = "blue";
+        newPostStartup.style.marginTop = "-10px";
 
-    newPostCardHeading.append(newPostCardTitle);
-    newPostCardHeading.append(newPostStartup);
-    newPostCardBody.append(newPostBody);
-    newPostCard.append(newPostCardHeading);
-    newPostCard.append(newPostCardBody);
-    newPostCard.setAttribute("data-post", JSON.stringify(post));
+        newPostCardHeading.append(newPostCardTitle);
+        newPostCardHeading.append(newPostStartup);
+        newPostCardBody.append(newPostBody);
+        newPostCard.append(newPostCardHeading);
+        newPostCard.append(newPostCardBody);
+        newPostCard.setAttribute("data-post", JSON.stringify(post));
 
-    console.log("newPostCard", newPostCard);
-    return newPostCard;
+        console.log("newPostCard", newPostCard);
+        return newPostCard;
+      })
+      .catch((err) => console.error(err));
   };
 
   //   if (!data || !data.length) {
@@ -71,15 +72,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // .catch((error) => console.error("Error:", error));
   // };
 
-  // Get a blog post from a specific author
-  // const url = window.location.search;
-  // let StartupId;
-  // if (url.indexOf("?startup_id=") !== -1) {
-  //   StartupId = url.split("=")[1];
-  //   getPosts(StartupId);
-  // } else {
-  //   getPosts();
-  // }
+  //Get a blog post from a specific author
+  const url = window.location.search;
+  let StartupId;
+  if (url.indexOf("?startup_id=") !== -1) {
+    StartupId = url.split("=")[1];
+    getPosts(StartupId);
+  } else {
+    getPosts();
+  }
 
   // // Front end call to DELETE a post
   // const deletePost = (id) => {

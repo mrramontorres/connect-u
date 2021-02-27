@@ -11,13 +11,13 @@ module.exports = (app) => {
   );
 
   app.get("/blog", (req, res) =>
-    res.sendFile(path.join(__dirname, "../public/blog.html"))
+    res.sendFile(path.join(__dirname, "../views/blog.html"))
   );
 
   // second route loads second.html
   app.get("/cms", (req, res) =>
     //console.log("GET second html not read yet")
-    res.sendFile(path.join(__dirname, "../public/cms.html"))
+    res.sendFile(path.join(__dirname, "../views/cms.html"))
   );
 
   // third route loads third.html
