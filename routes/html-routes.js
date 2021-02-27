@@ -7,9 +7,13 @@ module.exports = (app) => {
 
   // index route loads view.html
   app.get("/", (req, res) =>
-    res.sendFile(path.join(__dirname, "../public/blog.html"))
+    res.render("indexintro")
   );
 
+  app.get("/login", (req, res) =>
+  res.render("login-signup")
+ );
+ 
   app.get("/blog", (req, res) =>
     res.sendFile(path.join(__dirname, "../public/blog.html"))
 
