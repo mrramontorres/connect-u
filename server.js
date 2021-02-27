@@ -9,7 +9,7 @@ const suRouter = require("./routes/su-api-routes.js");
 const postRouter = require("./routes/post-api-routes.js");
 // Sets up the Express App
 const app = express();
-const PORT = process.env.PORT || 8082;
+const PORT = process.env.PORT || 8083;
 
 // Requiring our models for syncing
 const db = require("./models");
