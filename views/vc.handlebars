@@ -1,0 +1,229 @@
+
+    <nav class="hover-underline-menu" data-menu-underline-from-center>
+        <ul class="menu align-center">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">VC</a></li>
+          <li><a href="#">Startup</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+    </nav>
+
+    <div class="wrapper">
+        <div class="title">
+         VC Registration Form
+        </div>
+        <div class="form">
+           <div class="inputfield">
+              <label>First Name</label>
+              <input type="text" class="input">
+           </div>  
+            <div class="inputfield">
+              <label>Last Name</label>
+              <input type="text" class="input">
+           </div>  
+        
+            <div class="inputfield">
+              <label>Address</label>
+              <textarea class="textarea"></textarea>
+             </div> 
+            <div class="inputfield">
+              <label>City</label>
+              <input type="text" class="input">
+           </div> 
+            <div class="inputfield">
+              <label>State</label>
+              <input type="text" class="input">
+            </div> 
+            <div class="inputfield">
+                <label>Website</label>
+                <input type="text" class="input">
+              </div> 
+            <div class="inputfield">
+                <label>Industries 1</label>
+                <input type="insdustries" class="input">
+             </div>  
+              <div class="inputfield">
+                <label>Industries 2</label>
+                <input type="industries" class="input">
+                
+              </div> 
+            <div class="inputfield">
+              <label>Stage</label>
+              <input type="text" class="input">
+            </div> 
+            <div class="inputfield">
+             <label>Priority</label>
+             <input type="text" class="input">
+           </div> 
+           <div class="inputfield">
+            <label>Lead</label>
+            <input type="text" class="input">
+          </div> 
+          <div class="inputfield terms">
+            <label class="check">
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <p>Agreed to terms and conditions</p>
+          </div> 
+          <div class="inputfield">
+            <input type="submit" value="Register" class="btn">
+          </div>
+        </div>
+    </div>	
+
+<div style="margin-bottom: 90px"></div>
+
+
+    <div class="row top-margin" style="text-align:center">
+      <div class="column align-self-middle">
+        <div class="callout callout-hover-reveal" data-callout-hover-reveal>
+          <div class="callout-body">
+            <h2> All Startup with same VC Industries </h2>
+            <!-- <p>I'll show you Bill Murray in the callout footer.</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div style="margin-bottom: 90px"></div>
+    
+    
+    <table id="vc-data" class="display nowrap" cellspacing="0" width="100%">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Website</th>
+          <th>Industies</th>
+          <th>Industries</th>
+          <th>City</th>
+          <th>Stage</th>
+          <th>Priority</th>
+          <th>Start date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Name</th>
+          <th>Website</th>
+          <th>Industies</th>
+          <th>Industries</th>
+          <th>City</th>
+          <th>Stage</th>
+          <th>Priority</th>
+          <th>Start date</th>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <th>Website</th>
+          <th>Industies</th>
+          <th>Industries</th>
+          <th>City</th>
+          <th>Stage</th>
+          <th>Priority</th>
+          <th>Start date</th>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <th>Website</th>
+          <th>Industies</th>
+          <th>Industries</th>
+          <th>City</th>
+          <th>Stage</th>
+          <th>Priority</th>
+          <th>Start date</th>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <th>Website</th>
+          <th>Industies</th>
+          <th>Industries</th>
+          <th>City</th>
+          <th>Stage</th>
+          <th>Priority</th>
+          <th>Start date</th>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <th>Website</th>
+          <th>Industies</th>
+          <th>Industries</th>
+          <th>City</th>
+          <th>Stage</th>
+          <th>Priority</th>
+          <th>Start date</th>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <th>Website</th>
+          <th>Industies</th>
+          <th>Industries</th>
+          <th>City</th>
+          <th>Stage</th>
+          <th>Priority</th>
+          <th>Start date</th>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <th>Website</th>
+          <th>Industies</th>
+          <th>Industries</th>
+          <th>City</th>
+          <th>Stage</th>
+          <th>Priority</th>
+          <th>Start date</th>
+        
+      <tfoot>
+          <tr>
+            <th>Name</th>
+            <th>Website</th>
+            <th>Industies</th>
+            <th>Industries</th>
+            <th>City</th>
+            <th>Stage</th>
+            <th>Priority</th>
+            <th>Start date</th>
+          </tr>
+      </tfoot>
+    </table>
+    
+    <div style="margin-bottom: 90px"></div>
+    
+    <script>
+    
+      
+    /*-----------callout----------*/
+    
+      $(function(){
+      $('[data-callout-hover-reveal]').hover(function(){
+        $(this).find('.callout-footer').slideDown(250);
+          },function(){
+        $(this).find('.callout-footer').slideUp(250);
+        });
+      })
+      
+      /*----------------table----------------*/
+      $(document).ready(function() {
+          var table = $('#example').DataTable( {
+           responsive: {
+            details: {
+            renderer: function ( api, rowIdx, columns ) {
+              var data = $.map( columns, function ( col, i ) {
+                return col.hidden ?
+                  '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
+                    '<td>'+col.title+':'+'</td> '+
+                    '<td>'+col.data+'</td>'+
+                  '</tr>' :
+                  '';
+              } ).join('');
+                      var extra = "'<tr>'+'<td>21</td> '+'<td>32</td>'+'</tr>'";
+            return data ?$('<table/>').append( data ).append( extra ) :false;
+            }
+          }
+        }
+      } ); // end of DataTable                            
+      } );
+    
+    </script>
+    

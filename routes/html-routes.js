@@ -6,9 +6,15 @@ module.exports = (app) => {
   // Each of the below routes just handles the HTML page that the user gets sent to.
 
   // index route loads view.html
-  app.get("/", (req, res) =>
-    res.sendFile(path.join(__dirname, "../views/blog.html"))
-  );
+  app.get("/", (req, res) => res.render("indexintro"));
+
+  app.get("/login", (req, res) => res.render("login-signup"));
+
+  app.get("/browser", (req, res) => res.render("browser"));
+
+  app.get("/vc", (req, res) => res.render("vc"));
+
+  app.get("/startup", (req, res) => res.render("startup"));
 
   app.get("/blog", (req, res) =>
     res.sendFile(path.join(__dirname, "../views/blog.html"))
