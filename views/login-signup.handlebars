@@ -1,17 +1,17 @@
-
+{{!-- 
     <div class="hero">
         <div class="form-box">
                <div class="button-box">
                    <div id="btn"></div>
                    <button type="button" class="toggle-btn" onclick="login()" >Log In</button>
                    <button type="button" class="toggle-btn" onclick="signup()" >Sign Up</button>
-
                 </div>
+
             <form id="login" class="input-group">
                  <input type="text" class="input-field" placeholder="User Email" required>
-                 {{!-- <input type="text" class="input-field" placeholder="Enter Password" required> 
+                 <input type="text" class="input-field" placeholder="Enter Password" required> 
                  <input type="checkbox" class="check-box"><span>Remember Password</span>
-                 <button type="submit" class= "submit-btn">Log In</button> --}}
+                 <button type="submit" class= "submit-btn">Log In</button>
             </form>
 
             <form id="signup" class="input-group">
@@ -49,4 +49,30 @@
         z.style.left = "0px";
       }
 
-    </script>
+    </script> --}}
+
+
+
+
+<div class="hero">
+  <div class="form-box">
+    <div class="button-box">
+      <div id="btn"></div>
+      <button type="button" class="toggle-btn">Log In</button>
+      <button type="button" class="toggle-btn">Sign Up</button>
+    </div>
+
+    {{!-- <div class="social-icons">
+      <img src="">
+    </div> --}}
+
+    <form class="input-group">
+     <input type="text" clas="input-field" placeholder=" User Id" required>
+       <input type="text" clas="input-field" placeholder=" Enter Password" required>
+       <input type="check-box" class="check-box"><span>Remember Password</span>
+       <button type="submit" class="submit-btn">Log In</button>
+    </form>
+  </div>
+    
+</div>
+
