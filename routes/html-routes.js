@@ -12,8 +12,20 @@ module.exports = (app) => {
 
   app.get("/login", (req, res) =>
   res.render("login-signup")
- );
+  );
  
+  app.get("/browser", (req, res) =>
+  res.render("browser")
+  );
+  
+  app.get("/vc", (req, res) =>
+  res.render("vc")
+  );
+  
+  app.get("/startup", (req, res) =>
+  res.render("startup")
+  );
+
   app.get("/blog", (req, res) =>
     res.sendFile(path.join(__dirname, "../public/blog.html"))
 
