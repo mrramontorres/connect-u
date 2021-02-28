@@ -33,7 +33,7 @@
      margin: 35px auto;
      position: relative;
      box-shadow: 0 0 20px 9px #6866651f;
-     border-radius: 30px;
+     border-radius: 30px !important;
 }
   
 .toggle-btn {
@@ -91,6 +91,7 @@
     border: 0;
     outline: none;
     border-radius: 50px !important;
+    /* border-radius: 30px; */
   
 }
   

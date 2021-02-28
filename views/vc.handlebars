@@ -1,4 +1,7 @@
  
+ <link rel="stylesheet" href="/assets/css/stylevc.css">
+ 
+
     <nav class="hover-underline-menu" data-menu-underline-from-center>
         <ul class="menu align-center">
           <li><a href="#">Home</a></li>
@@ -229,43 +232,5 @@
     
        {{!-- /*---------------end of table------------------*/ --}}
 
-    
-    <script>
-
-
-    /*------navbar----------*/
-
-  $("[data-menu-underline-from-center] a").addClass("underline-from-center");
-
-  /*-----------------navbarend-----------*/
-      
-    /*-----------callout----------*/
-    
-      $(function(){
-      $('[data-callout-hover-reveal]').hover(function(){
-        $(this).find('.callout-footer').slideDown(250);
-          },function(){
-        $(this).find('.callout-footer').slideUp(250);
-        });
-      })
-      
-      /*----------------table----------------*/
-
-    $('[data-open-details]').click(function (e) {
-      e.preventDefault();
-      $(this).next().toggleClass('is-active');
-      $(this).toggleClass('is-active');
-    });
-  /*-------------image---------------*/  
-
-  $('.sim-thumb').on('click', function() {
-  $('#main-product-image').attr('src', $(this).data('image'));
-  })
-
-
-
-
-
-    
-    </script>
-    
+  
+    <script src="/script/vc.js"></script>

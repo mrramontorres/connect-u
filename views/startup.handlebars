@@ -1,4 +1,7 @@
- 
+
+   	 <link rel="stylesheet" href="/assets/css/stylestartup.css">
+      
+   
     <nav class="hover-underline-menu" data-menu-underline-from-center>
         <ul class="menu align-center">
           <li><a href="#">Home</a></li>
@@ -8,8 +11,49 @@
         </ul>
     </nav>
 
-    <div style="margin-bottom: 90px"></div>
+    {{!-- <div style="margin-bottom: 90px"></div> --}}
 
+{{!-- /*----------scroll images------------*/ --}}
+
+<div class="fullscreen-image-slider">
+  <div class="orbit" role="region" aria-label="FullScreen Pictures" data-orbit>
+    <ul class="orbit-container">
+      <button class="orbit-previous">
+        <span class="show-for-sr">Previous Slide</span>
+        <span class="nav fa fa-chevron-left fa-3x"></span>
+      </button>
+      <button class="orbit-next">
+        <span class="show-for-sr">Next Slide</span>
+        <span class="nav fa fa-chevron-right fa-3x"></span>
+      </button>
+      <li class="is-active orbit-slide">
+        <img class="orbit-image" src="https://i.imgur.com/16z9ObN.jpg" alt="Space">
+        <figcaption class="orbit-caption">
+          <h1>Lorem ipsum dolor sit amet, <br>consectetur adipisicing elit.</h1>
+        </figcaption>
+      </li>
+      <li class="orbit-slide">
+        <img class="orbit-image" src="https://i.imgur.com/JD4Caxa.jpg" alt="Space">
+        <figcaption class="orbit-caption">
+          <h1>Lorem ipsum dolor sit amet, <br>consectetur adipisicing elit.</h1>
+        </figcaption>
+      </li>
+      <li class="orbit-slide">
+        <img class="orbit-image" src="https://i.imgur.com/rsTQbNV.jpg" alt="Space">
+        <figcaption class="orbit-caption">
+          <h1>Lorem ipsum dolor sit amet, <br>consectetur adipisicing elit.</h1>
+        </figcaption>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+ <div style="margin-bottom:200px"></div>
+
+
+
+{{!-- /*----------middle callout------------*/ --}}
 
     <div class="row top-margin" style="text-align:center">
       <div class="column align-self-middle">
@@ -21,9 +65,10 @@
         </div>
       </div>
     </div>
+
+    {{!-- /*----------middle callout------------*/ --}}
     
-    
-    <div style="margin-bottom: 90px"></div>
+    <div style="margin-bottom:100px"></div>
     
     {{!-- /*---------------start of table------------------*/ --}}
     
@@ -199,32 +244,8 @@
        {{!-- /*---------------end of table------------------*/ --}}
 
   
-
-    <div style="margin-bottom: 90px"></div>
+<script src="/script/startups.js"></script>
+  
     
-    <script>
-      
-    /*------navbar----------*/
-  $("[data-menu-underline-from-center] a").addClass("underline-from-center");
-
-  /*-----------------navbarend-----------*/
-      
-    /*-----------callout----------*/
-    
-      $(function(){
-      $('[data-callout-hover-reveal]').hover(function(){
-        $(this).find('.callout-footer').slideDown(250);
-          },function(){
-        $(this).find('.callout-footer').slideUp(250);
-        });
-      })
-      
-      /*----------------table----------------*/
-      $('[data-open-details]').click(function (e) {
-      e.preventDefault();
-      $(this).next().toggleClass('is-active');
-      $(this).toggleClass('is-active');
-      });
-    
-    </script> 
+   
     

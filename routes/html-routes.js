@@ -14,12 +14,12 @@ module.exports = (app) => {
   res.render("login-signup")
   );
 
-  app.get("/register", (req, res) =>
-  res.render("regsiter-vc")
+  app.get("/register1", (req, res) =>
+  res.render("register1-vc")
   );
 
-  app.get("/register", (req, res) =>
-  res.render("regsiter-startups")
+  app.get("/register2", (req, res) =>
+  res.render("register2-startups")
   ); 
 
   app.get("/browser", (req, res) =>
