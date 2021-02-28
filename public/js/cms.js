@@ -1,3 +1,5 @@
+//Interact with database to add more data into it
+
 // Helper functions to show/hide elements
 const show = (el) => {
   el.style.display = "block";
@@ -11,18 +13,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const bodyInput = document.getElementById("body");
   const titleInput = document.getElementById("title");
   const cmsForm = document.getElementById("cms");
-  const authorSelect = document.getElementById("author");
+  //const startupSelect = document.getElementById("startup");
 
   // Get query parameter
   const url = window.location.search;
   let postId;
-  let authorId;
+  let StartupId;
   let updating = false;
 
   // Get post data for editing/adding
   const getPostData = (id, type) => {
     const queryUrl =
-      type === "post" ? `/api/posts/${id}` : `/api/authors/${id}`;
+      type === "post" ? `/api/posts/${id}` : `/api/startups/${id}`;
 
     fetch(queryUrl, {
       method: "GET",
@@ -38,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
           // Populate the form for editing
           titleInput.value = data.title;
           bodyInput.value = data.body;
-          authorId = data.AuthorId || data.id;
+          StartupId = data.StartupId || data.id;
 
           // We are updating
           updating = true;
@@ -53,8 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
     getPostData(postId, "post");
   }
   // Otherwise if we have an author_id in our url, preset the author select box to be our Author
-  else if (url.indexOf("?author_id=") !== -1) {
-    authorId = url.split("=")[1];
+  else if (url.indexOf("?startup_id=") !== -1) {
+    StartupId = url.split("=")[1];
   }
 
   // Event handler for when the post for is submitted
@@ -64,8 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Make sure the form isn't empty
     if (
       !titleInput.value.trim() ||
-      !bodyInput.value.trim() ||
-      !authorSelect.value
+      !bodyInput.value.trim()
+      //!startupSelect.value
     ) {
       return;
     }
@@ -74,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const newPost = {
       title: titleInput.value.trim(),
       body: bodyInput.value.trim(),
-      AuthorId: authorSelect.value,
+      //StartupId: startupSelect.value,
     };
 
     // Update a post if flag is true, otherwise submit a new one
@@ -105,50 +107,50 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Render a list of authors or redirect if no authors
-  const renderAuthorList = (data) => {
-    console.log("renderAuthorList -> data", data);
-    if (!data.length) {
-      window.location.href = "/authors";
-    }
-    if (document.querySelector(".hidden")) {
-      show(document.querySelector(".hidden"));
-    }
+  // const renderStartupsList = (data) => {
+  //   console.log("renderStartupList -> data", data);
+  //   if (!data.length) {
+  //     window.location.href = "/startups";
+  //   }
+  //   if (document.querySelector(".hidden")) {
+  //     show(document.querySelector(".hidden"));
+  //   }
 
-    const rowsToAdd = [];
+  //   const rowsToAdd = [];
 
-    data.forEach((author) => rowsToAdd.push(createAuthorRow(author)));
+  //   data.forEach((Startup) => rowsToAdd.push(createStartupRow(Startup)));
 
-    authorSelect.innerHTML = "";
-    console.log("renderAuthorList -> rowsToAdd", rowsToAdd);
-    console.log("authorSelect", authorSelect);
+  //   startupSelect.innerHTML = "";
+  //   console.log("renderStartupList -> rowsToAdd", rowsToAdd);
+  //   console.log("startupSelect", startupSelect);
 
-    rowsToAdd.forEach((row) => authorSelect.append(row));
-    authorSelect.value = authorId;
-  };
+  //   rowsToAdd.forEach((row) => startupSelect.append(row));
+  //   startupSelect.value = StartupId;
+  // };
 
-  // Build author dropdown
-  const createAuthorRow = ({ id, name }) => {
-    const listOption = document.createElement("option");
-    listOption.value = id;
-    listOption.textContent = name;
-    return listOption;
-  };
+  // // Build author dropdown
+  // const createStartupRow = ({ id, name }) => {
+  //   const listOption = document.createElement("option");
+  //   listOption.value = id;
+  //   listOption.textContent = name;
+  //   return listOption;
+  // };
 
   // A function to get Authors and then call the render function
-  const getAuthors = () => {
-    fetch("api/authors", {
+  const getStartups = () => {
+    fetch("api/startups", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
       },
     })
       .then((response) => response.json())
-      .then((data) => renderAuthorList(data))
+      .then((data) => renderStartupsList(data))
       .catch((err) => console.error(err));
   };
 
   // Get the authors, and their posts
-  getAuthors();
+  getStartups();
 
   // Update a post then redirect to blog
   const updatePost = (post) => {
