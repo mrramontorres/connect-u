@@ -1,4 +1,4 @@
-
+ 
     <nav class="hover-underline-menu" data-menu-underline-from-center>
         <ul class="menu align-center">
           <li><a href="#">Home</a></li>
@@ -8,57 +8,81 @@
         </ul>
     </nav>
 
+  {{!-- /*--------------slider----------------*/ --}}
+
+<div style="margin-bottom: 50px"></div>
+  
+    {{!-- /*-----------------VC Registration form---------------*/ --}}
+
     <div class="wrapper">
           <div class="title">
             VC Registration Form
           </div>
       <div class="form">
-            <div class="inputfield">
+          <div class="inputfield">
               <label>First Name</label>
               <input type="text" class="input">
-            </div>  
-            <div class="inputfield">
+          </div>  
+          <div class="inputfield">
               <label>Website</label>
               <input type="text" class="input">
-            </div> 
+          </div> 
 
-            <div class="inputfield">
+          <div class="inputfield">
               <label>City</label>
               <input type="text" class="input">
-            </div> 
-            <div class="inputfield">
+          </div> 
+          <div class="inputfield">
               <label>State</label>
               <input type="text" class="input">
-            </div> 
-            <div class="inputfield">
+          </div> 
+          <div class="inputfield">
                 <label>Industries 1</label>
                 <input type="insdustries" class="input">
-             </div>  
-              <div class="inputfield">
+          </div>  
+          <div class="inputfield">
                 <label>Industries 2</label>
                 <input type="industries" class="input">
                 
-              </div> 
-            <div class="inputfield">
+          </div> 
+          <div class="inputfield">
               <label>Stage</label>
               <input type="text" class="input">
-            </div> 
-            <div class="inputfield">
+          </div> 
+          <div class="inputfield">
              <label>Priority</label>
              <input type="text" class="input">
-           </div> 
-            <div class="inputfield">
+          </div> 
+          <div class="inputfield">
                <label>Lead</label>
                <input type="text" class="input">
-            </div> 
-            <div class="inputfield">
+          </div> 
+          <div class="inputfield">
               <input type="submit" value="Register" class="btn">
-            </div>
+        </div>
       </div>
     </div>	
 
-<div style="margin-bottom: 90px"></div>
+{{!-- /*-------------input end----------------*/ --}}
 
+
+{{!-- /*-------------right image ----------------*/ --}}
+
+<div class="row align-center">
+  <div class="product-image-gallery">
+    <img class="pdp-product-image" id="main-product-image" src="assets/img/circleimg1.png" text="imag-1" width="650" height="650" alt="">
+    <br>
+    <ul class="menu product-thumbs align-center">
+      <li> <a class="sim-thumb" data-image="assets/img/circleimg1.png" text="imag-1" width="650" height="650"><img src="assets/img/circleimg1.png" width="50" height="50" alt=""></a> </li>
+      <li> <a class="sim-thumb" data-image="assets/img/blackcircle2.png"  text="imag-2"  width="650" height="650"><img src="assets/img/blackcircle2.png" width="50" height="50" alt=""></a> </li>
+      <li> <a class="sim-thumb" data-image="assets/img/officeimg3.png"  text="imag-3" width="650" height="650"><img src="assets/img/officeimg3.png" width="50" height="50" alt=""></a> </li>
+    </ul>
+  </div>
+</div>
+
+          <div style="margin-bottom: 90px"></div>
+
+  {{!-- /*-------------middle start----------------*/ --}}
 
     <div class="row top-margin" style="text-align:center">
       <div class="column align-self-middle">
@@ -70,9 +94,12 @@
         </div>
       </div>
     </div>
+
+  {{!-- /*-------------middle end----------------*/ --}}
+     
+   
     
-    
-    <div style="margin-bottom: 90px"></div>
+  {{!-- /*---------------start of table------------------*/ --}}
     
     <table class="table-expand" id="vc-data">
   <thead>
@@ -80,9 +107,9 @@
       <th width="150">Name</th>
       <th width="150">Website</th>
       <th width="70">City</th>
-      <th width="60">State</th>
-      <th width="200">Industries</th>
-      <th width="70">Stage</th>
+      <th width="100">State</th>
+      <th width="180">Industries</th>
+      <th width="80">Stage</th>
       <th width="70">lead</th>
     </tr>
   </thead>
@@ -253,10 +280,14 @@
     
     <div style="margin-bottom: 90px"></div>
     
+       {{!-- /*---------------end of table------------------*/ --}}
+
+    
     <script>
 
 
     /*------navbar----------*/
+
   $("[data-menu-underline-from-center] a").addClass("underline-from-center");
 
   /*-----------------navbarend-----------*/
@@ -272,12 +303,22 @@
       })
       
       /*----------------table----------------*/
+
     $('[data-open-details]').click(function (e) {
       e.preventDefault();
       $(this).next().toggleClass('is-active');
       $(this).toggleClass('is-active');
     });
-  
+  /*-------------simage---------------*/  
+
+  $('.sim-thumb').on('click', function() {
+  $('#main-product-image').attr('src', $(this).data('image'));
+  })
+
+
+
+
+
     
     </script>
     

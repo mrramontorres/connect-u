@@ -34,19 +34,36 @@
   transition: all 0.5s ease;
 }
 
+
+/* @media screen and (max-width: 1024px) {
+  .no-js .top-bar {
+    display: none;
+  }
+  
+  #top-bar-sticky-logo {
+    font-size: 16px;
+  }
+}
+
+@media print, screen and (min-width: 1024px) {
+  .no-js .title-bar {
+    display: none;
+  }
+} */
+
 /*--------------end of browser-------------*/
   
 
 
  /*---------------VC input ---------------*/
 
- @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+ /* @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap'); */
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* body{
@@ -64,11 +81,16 @@
   padding: 30px;
 }
 
+/* .float-left{
+  float:left;
+  margin-right: 25px;
+} */
+
 .wrapper .title{
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 25px;
-  color: #201f2b;
+  color: #39393b;
   text-transform: uppercase;
   text-align: center;
 }
@@ -87,7 +109,7 @@
    width: 200px;
    color: #757575;
    margin-right: 10px;
-  font-size: 14px;
+   font-size: 14px;
 }
 
 .wrapper .form .inputfield .input,
@@ -224,6 +246,38 @@
  /*---------------VC input end ---------------*/
 
 
+/*--------------right image--------------*/
+
+.product-image-gallery {
+  background-color: #fefefe;
+  padding: 1.5rem;
+}
+
+.pdp-product-image {
+  margin-bottom: 20px;
+}
+
+.product-thumbs a {
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 0 !important;
+}
+
+.product-thumbs a img {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  border: solid 4px #fefefe;
+  border-radius: 0;
+  box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
+  line-height: 0;
+  border-radius: 3px;
+  width: 50px;
+  height: 50px;
+  border: none;
+}
+
+/*--------------end image--------------*/
 
 
 /*------Hover middle braek-------------------------*/
@@ -243,14 +297,66 @@ list-style-type: none;
 
 /*-------briowser table----*/
 
-/* .vc-data{
-
-}  */
-
-.tableouter{
-  text-align: center;
+.table-expand {
+  margin-top: 5rem;
 }
 
+.table-expand td {
+  color: #8a8a8a;
+}
+
+.table-expand tr {
+  border: 1px solid #e6e6e6;
+}
+
+.table-expand .text-right {
+  padding-right: 3rem;
+}
+
+.table-expand-row.is-active .expand-icon::after {
+  content: '-';
+}
+
+.table-expand-row .expand-icon::after {
+  content: '+';
+  float: right;
+}
+
+.table-expand-row-content {
+  display: none;
+}
+
+.table-expand-row-content.is-active {
+  display: table-row;
+  -webkit-animation: fadeIn ease-in 1;
+          animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+.table-expand-row-nested {
+  background-color: #e6e6e6;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 /*-------briowser table end----*/
 
