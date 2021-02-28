@@ -9,35 +9,27 @@
     </nav>
 
     <div class="wrapper">
-        <div class="title">
-         VC Registration Form
-        </div>
-        <div class="form">
-           <div class="inputfield">
+          <div class="title">
+            VC Registration Form
+          </div>
+      <div class="form">
+            <div class="inputfield">
               <label>First Name</label>
               <input type="text" class="input">
-           </div>  
+            </div>  
             <div class="inputfield">
-              <label>Last Name</label>
+              <label>Website</label>
               <input type="text" class="input">
-           </div>  
-        
-            <div class="inputfield">
-              <label>Address</label>
-              <textarea class="textarea"></textarea>
-             </div> 
+            </div> 
+
             <div class="inputfield">
               <label>City</label>
               <input type="text" class="input">
-           </div> 
+            </div> 
             <div class="inputfield">
               <label>State</label>
               <input type="text" class="input">
             </div> 
-            <div class="inputfield">
-                <label>Website</label>
-                <input type="text" class="input">
-              </div> 
             <div class="inputfield">
                 <label>Industries 1</label>
                 <input type="insdustries" class="input">
@@ -55,21 +47,14 @@
              <label>Priority</label>
              <input type="text" class="input">
            </div> 
-           <div class="inputfield">
-            <label>Lead</label>
-            <input type="text" class="input">
-          </div> 
-          <div class="inputfield terms">
-            <label class="check">
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-            <p>Agreed to terms and conditions</p>
-          </div> 
-          <div class="inputfield">
-            <input type="submit" value="Register" class="btn">
-          </div>
-        </div>
+            <div class="inputfield">
+               <label>Lead</label>
+               <input type="text" class="input">
+            </div> 
+            <div class="inputfield">
+              <input type="submit" value="Register" class="btn">
+            </div>
+      </div>
     </div>	
 
 <div style="margin-bottom: 90px"></div>
@@ -89,109 +74,192 @@
     
     <div style="margin-bottom: 90px"></div>
     
-    
-    <table id="vc-data" class="display nowrap" cellspacing="0" width="100%">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Website</th>
-          <th>Industies</th>
-          <th>Industries</th>
-          <th>City</th>
-          <th>Stage</th>
-          <th>Priority</th>
-          <th>Start date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>Name</th>
-          <th>Website</th>
-          <th>Industies</th>
-          <th>Industries</th>
-          <th>City</th>
-          <th>Stage</th>
-          <th>Priority</th>
-          <th>Start date</th>
-        </tr>
-        <tr>
-          <th>Name</th>
-          <th>Website</th>
-          <th>Industies</th>
-          <th>Industries</th>
-          <th>City</th>
-          <th>Stage</th>
-          <th>Priority</th>
-          <th>Start date</th>
-        </tr>
-        <tr>
-          <th>Name</th>
-          <th>Website</th>
-          <th>Industies</th>
-          <th>Industries</th>
-          <th>City</th>
-          <th>Stage</th>
-          <th>Priority</th>
-          <th>Start date</th>
-        </tr>
-        <tr>
-          <th>Name</th>
-          <th>Website</th>
-          <th>Industies</th>
-          <th>Industries</th>
-          <th>City</th>
-          <th>Stage</th>
-          <th>Priority</th>
-          <th>Start date</th>
-        </tr>
-        <tr>
-          <th>Name</th>
-          <th>Website</th>
-          <th>Industies</th>
-          <th>Industries</th>
-          <th>City</th>
-          <th>Stage</th>
-          <th>Priority</th>
-          <th>Start date</th>
-        </tr>
-        <tr>
-          <th>Name</th>
-          <th>Website</th>
-          <th>Industies</th>
-          <th>Industries</th>
-          <th>City</th>
-          <th>Stage</th>
-          <th>Priority</th>
-          <th>Start date</th>
-        </tr>
-        <tr>
-          <th>Name</th>
-          <th>Website</th>
-          <th>Industies</th>
-          <th>Industries</th>
-          <th>City</th>
-          <th>Stage</th>
-          <th>Priority</th>
-          <th>Start date</th>
-        
-      <tfoot>
-          <tr>
-            <th>Name</th>
-            <th>Website</th>
-            <th>Industies</th>
-            <th>Industries</th>
-            <th>City</th>
-            <th>Stage</th>
-            <th>Priority</th>
-            <th>Start date</th>
-          </tr>
-      </tfoot>
-    </table>
+    <table class="table-expand" id="vc-data">
+  <thead>
+    <tr class="table-expand-row">
+      <th width="150">Name</th>
+      <th width="150">Website</th>
+      <th width="70">City</th>
+      <th width="60">State</th>
+      <th width="200">Industries</th>
+      <th width="70">Stage</th>
+      <th width="70">lead</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-expand-row" data-open-details>
+      <td>Luna Ferregani</td>
+      <td>luna@gmail.com</td>
+      <td>Milan</td>
+      <td>Italy</td>
+      <td>Fashion Design / Tech</td>
+      <td>1</td>
+      <td>2nd lead process<span class="expand-icon"></span></td>
+    </tr>
+
+    <tr class="table-expand-row-content">
+      <td colspan="8" class="table-expand-row-nested">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, 
+          adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?</p>
+      </td>
+    </tr>
+    <tr class="table-expand-row" data-open-details>
+      <td>Michael Blaun</td>
+      <td>mickael@gmail.com</td>
+      <td>New york</td>
+      <td>USA</td>
+      <td>Developer</td>
+      <td>2</td>
+      <td>scheduled <span class="expand-icon"></span></td>
+    </tr>
+
+    <tr class="table-expand-row-content">
+      <td colspan="8" class="table-expand-row-nested">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, 
+          adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?</p>
+      </td>
+      </td>
+    </tr>
+
+    <tr class="table-expand-row" data-open-details>
+      <td>Bruce Jackson</td>
+      <td>bruce@gmail.com</td>
+      <td>USA</td>
+      <td>LA</td>
+      <td>Marketing</td>
+      <td>1</td>
+      <td>carried over <span class="expand-icon"></span></td>
+    </tr>
+
+    <tr class="table-expand-row-content">
+      <td colspan="8" class="table-expand-row-nested">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam,
+           adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?</p>
+      </td>
+      </td>
+    </tr>
+
+    <tr class="table-expand-row" data-open-details>
+      <td>Kevin Lang</td>
+      <td>kevina@gmail.com</td>
+      <td>Milan</td>
+      <td>Italy</td>
+      <td>Tech</td>
+      <td>1</td>
+      <td>carried over <span class="expand-icon"></span></td>
+    </tr>
+
+    <tr class="table-expand-row-content">
+      <td colspan="8" class="table-expand-row-nested">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam,
+           adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?</p>
+      </td>
+      </td>
+    </tr>
+
+    <tr class="table-expand-row" data-open-details>
+      <td>Leo Ferregani</td>
+      <td>luna@gmail.com</td>
+      <td>USA</td>
+      <td>New York</td>
+      <td>Tech</td>
+      <td>1</td>
+      <td>carried over <span class="expand-icon"></span></td>
+    </tr>
+
+    <tr class="table-expand-row-content">
+      <td colspan="8" class="table-expand-row-nested">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam,
+           adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?</p>
+      </td>
+      </td>
+    </tr>
+
+    <tr class="table-expand-row" data-open-details>
+      <td>willian Ferrer</td>
+      <td>willian@gmail.com</td>
+      <td>LA</td>
+      <td>USA</td>
+      <td>Fashion Design / Tech</td>
+      <td>1</td>
+      <td>carried over <span class="expand-icon"></span></td>
+    </tr>
+
+    <tr class="table-expand-row-content">
+      <td colspan="8" class="table-expand-row-nested">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, 
+          adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?</p>
+      </td>
+      </td>
+    </tr>
+
+    <tr class="table-expand-row" data-open-details>
+      <td>Luna Ferregani</td>
+      <td>luna@gmail.com</td>
+      <td>Milan</td>
+      <td>Italy</td>
+      <td>Fashion Design / Tech</td>
+      <td>1</td>>
+      <td>paid <span class="expand-icon"></span></td>
+    </tr>
+
+    <tr class="table-expand-row-content">
+      <td colspan="8" class="table-expand-row-nested">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam,
+          adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?</p>
+      </td>
+      </td>
+    </tr>
+
+    <tr class="table-expand-row" data-open-details>
+      <td>Luna Ferregani</td>
+      <td>luna@gmail.com</td>
+      <td>Milan</td>
+      <td>Italy</td>
+      <td>Fashion Design / Tech</td>
+      <td>1</td>
+      <td>carried over <span class="expand-icon"></span></td>
+    </tr>
+
+    <tr class="table-expand-row-content">
+      <td colspan="8" class="table-expand-row-nested">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, 
+          adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?</p>
+      </td>
+      </td>
+    </tr>
+
+    <tr class="table-expand-row" data-open-details>
+      <td>Luna Ferregani</td>
+      <td>luna@gmail.com</td>
+      <td>Milan</td>
+      <td>Italy</td>
+      <td>Fashion Design / Tech</td>
+      <td>1</td>
+      <td>carried over <span class="expand-icon"></span></td>
+    </tr>
+
+    <tr class="table-expand-row-content">
+      <td colspan="8" class="table-expand-row-nested">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, 
+          adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?</p>
+      </td>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
     
     <div style="margin-bottom: 90px"></div>
     
     <script>
-    
+
+
+    /*------navbar----------*/
+  $("[data-menu-underline-from-center] a").addClass("underline-from-center");
+
+  /*-----------------navbarend-----------*/
       
     /*-----------callout----------*/
     
@@ -204,26 +272,12 @@
       })
       
       /*----------------table----------------*/
-      $(document).ready(function() {
-          var table = $('#example').DataTable( {
-           responsive: {
-            details: {
-            renderer: function ( api, rowIdx, columns ) {
-              var data = $.map( columns, function ( col, i ) {
-                return col.hidden ?
-                  '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
-                    '<td>'+col.title+':'+'</td> '+
-                    '<td>'+col.data+'</td>'+
-                  '</tr>' :
-                  '';
-              } ).join('');
-                      var extra = "'<tr>'+'<td>21</td> '+'<td>32</td>'+'</tr>'";
-            return data ?$('<table/>').append( data ).append( extra ) :false;
-            }
-          }
-        }
-      } ); // end of DataTable                            
-      } );
+    $('[data-open-details]').click(function (e) {
+      e.preventDefault();
+      $(this).next().toggleClass('is-active');
+      $(this).toggleClass('is-active');
+    });
+  
     
     </script>
     
