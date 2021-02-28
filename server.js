@@ -1,4 +1,5 @@
 require("dotenv").config();
+var passport = require("./config/passport");
 
 const express = require("express");
 
@@ -8,7 +9,7 @@ const suRouter = require("./routes/su-api-routes.js");
 const postRouter = require("./routes/post-api-routes.js");
 // Sets up the Express App
 const app = express();
-const PORT = process.env.PORT || 8082;
+const PORT = process.env.PORT || 8083;
 
 // Requiring our models for syncing
 const db = require("./models");
@@ -20,15 +21,16 @@ app.use(express.json());
 // Static directory
 app.use(express.static("public"));
 // We need to use sessions to keep track of our user's login status
-// app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
-// app.use(passport.initialize());
-// app.use(passport.session());
+
+//app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Set Handlebars.
-const exphbs = require('express-handlebars');
+const exphbs = require("express-handlebars");
 
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
-app.set('view engine', 'handlebars');
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 // Invoke routes
 htmlRouter(app);
