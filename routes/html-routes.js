@@ -8,7 +8,33 @@ module.exports = (app) => {
   // index route loads view.html
   app.get("/", (req, res) => res.render("indexintro"));
 
+
+  
+  app.get("/login", (req, res) =>
+  res.render("login-signup")
+  );
+
+  app.get("/register1", (req, res) =>
+  res.render("register1-vc")
+  );
+
+  app.get("/register2", (req, res) =>
+  res.render("register2-startups")
+  ); 
+
+  app.get("/browser", (req, res) =>
+  res.render("browser")
+  );
+  
+  app.get("/vc", (req, res) =>
+  res.render("vc")
+  );
+  
+  app.get("/startup", (req, res) =>
+  res.render("startup")
+  )
   app.get("/login", (req, res) => res.render("login-signup"));
+
 
   app.get("/browser", (req, res) => res.render("browser"));
 

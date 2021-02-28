@@ -1,3 +1,5 @@
+	
+     <link rel="stylesheet" href="/assets/css/stylelogin.css">
 
     <div class="hero">
         <div class="form-box">
@@ -8,18 +10,19 @@
                 </div>
 
             <form id="login" class="input-group">
-                 <input type="text" class="input-field" placeholder="User Email" required>
-                 <input type="text" class="input-field" placeholder="Enter Password" required> 
+                 <input  id="email-input" type="text" class="input-field" placeholder="User Email" required>
+                 <input id="password-input" type="password" class="input-field" placeholder="Enter Password" required> 
                  <input type="checkbox" class="check-box"><span>Remember Password</span>
                  <button type="submit" class= "submit-btn">Log In</button>
             </form>
 
             <form id="signup" class="input-group">
-                 <input type="text" class="input-field" placeholder="User Id" required>
-                 <input type="email" class="input-field" placeholder="Email Id" required>
-                 <input type="text" class="input-field" placeholder="Enter Password" required> 
+                 <input id="username-input" type="text" class="input-field" placeholder="User Name" required>
+                 <input id="signupemail-input" type="email" class="input-field" placeholder="Email Id" required>
+                 <input id="signuppassword-input" type="text" class="input-field" placeholder="Enter Password" required> 
+                  <div id = "alert"></div>
                  <br>
-                 <br>
+                
                  <legend>Choose Your Field</legend>
                  <input type="radio" class="check-box1" name="pokemon" value="Red" id="pokemonRed" required><label for="pokemonRed">VC</label>
                  <input type="radio" class="check-box1"  name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Startup</label>
@@ -29,27 +32,13 @@
         </div>
     </div>
 
-    <script>
+    <script src="/js/login.js"></script>
 
-       var x = document.getElementById("login");
-       var y = document.getElementById("signup");
-       var z = document.getElementById("btn")
+    <script src="/js/signup.js"></script>
+
+    <script src="/script/login-signup.js"></script>
 
 
-      function signup() {
-        x.style.left = "-400px";
-        y.style.left = "50px";
-        z.style.left = "110px";
-
-      }
-
-      function login() {
-        x.style.left = "50px";
-        y.style.left = "450px";
-        z.style.left = "0px";
-      }
-
-    </script> 
 
 
 

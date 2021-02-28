@@ -31,7 +31,7 @@ passport.use(new LocalStrategy(
       // If none of the above, return the user
       return done(null, dbUser);
     });
-    require("log-timestamp");
+    // require("log-timestamp");
     console.log("After log-timestamp");
   },
 ));
