@@ -1,5 +1,8 @@
 	
-     <link rel="stylesheet" href="/assets/css/stylelogin.css">
+    <link rel="stylesheet" href="/assets/css/stylelogin.css">
+
+    
+      {{!-- <div style="margin-bottom: 120px"></div> --}}
 
     <div class="hero">
         <div class="form-box">
@@ -20,7 +23,12 @@
                  <input id="username-input" type="text" class="input-field" placeholder="User Name" required>
                  <input id="signupemail-input" type="email" class="input-field" placeholder="Email Id" required>
                  <input id="signuppassword-input" type="password" class="input-field" placeholder="Enter Password" required> 
-                  <div id = "alert"></div>
+                  {{!-- <div id = "alert"></div> --}}
+
+                    <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error:</span> <span class="msg"></span>
+                    </div>
                  <br>
                 
                  <legend>Choose Your Field</legend>
