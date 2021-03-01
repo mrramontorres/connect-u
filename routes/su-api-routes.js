@@ -16,34 +16,42 @@ module.exports = (app) => {
 
   // Get route for retrieving startup data
   app.get("/api/startups/:id", (req, res) => {
-    db.Startup.findOne({
-      where: {
-        id: req.params.id,
-      },
-    }).then((dbStartup) => res.json(dbStartup));
+    db.startup_profile
+      .findOne({
+        where: {
+          id: req.params.id,
+        },
+      })
+      .then((dbStartup) => res.json(dbStartup));
   });
 
   // POST route for saving a new startup
   app.post("/api/startups", (req, res) => {
-    db.Startup.create(req.body).then((dbStartup) => res.json(dbStartup));
+    db.startup_profile
+      .create(req.body)
+      .then((dbStartup) => res.json(dbStartup));
   });
 
   // DELETE route for deleting a startup
   app.delete("/api/startups/:id", (req, res) => {
-    db.Startup.destroy({
-      where: {
-        id: req.params.id,
-      },
-    }).then((dbStartup) => res.json(dbStartup));
+    db.startup_profile
+      .destroy({
+        where: {
+          id: req.params.id,
+        },
+      })
+      .then((dbStartup) => res.json(dbStartup));
   });
 
   // PUT route for updating startup information
   // Grabs id
   app.put("/api/startups", (req, res) => {
-    db.Startup.update(req.body, {
-      where: {
-        id: req.params.id,
-      },
-    }).then((dbStartup) => res.json(dbStartup));
+    db.startup_profile
+      .update(req.body, {
+        where: {
+          id: req.params.id,
+        },
+      })
+      .then((dbStartup) => res.json(dbStartup));
   });
 };
