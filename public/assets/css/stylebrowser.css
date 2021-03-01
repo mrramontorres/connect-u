@@ -1,38 +1,37 @@
-
 /*---------Browser navbar--use in VC AND STARTUP --------------*/
 
 .hover-underline-menu {
-    width: 100%;
-  }
-  
-  .hover-underline-menu .menu {
-    background-color: #2C3840;
-  }
-  
-  .hover-underline-menu .menu a {
-    color: #fefefe;
-    padding: 1.2rem 1.5rem;
-  }
-  
-  .hover-underline-menu .menu .underline-from-center {
-    position: relative;
-  }
-  
-  .hover-underline-menu .menu .underline-from-center::after {
-    content: "";
-    position: absolute;
-    top: calc(100% - 0.125rem);
-    border-bottom: 0.125rem solid #fefefe;
-    left: 50%;
-    right: 50%;
-    transition: all 0.5s ease;
-  }
-  
-  .hover-underline-menu .menu .underline-from-center:hover::after {
-    left: 0;
-    right: 0;
-    transition: all 0.5s ease;
-  }
+  width: 100%;
+}
+
+.hover-underline-menu .menu {
+  background-color: #2C3840;
+}
+
+.hover-underline-menu .menu a {
+  color: #fcc9b9;
+  padding: 1.2rem 1.5rem;
+}
+
+.hover-underline-menu .menu .underline-from-center {
+  position: relative;
+}
+
+.hover-underline-menu .menu .underline-from-center::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - 0.125rem);
+  border-bottom: 0.125rem solid  #b8255a;;
+  left: 50%;
+  right: 50%;
+  transition: all 0.5s ease;
+}
+
+.hover-underline-menu .menu .underline-from-center:hover::after {
+  left: 0;
+  right: 0;
+  transition: all 0.5s ease;
+}
   
   
   /* @media screen and (max-width: 1024px) {
@@ -57,13 +56,13 @@
   
 /*-----------------image card at Broiwser----------------*/
 
-body {
+/* body {
   font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   color: #333;
   background-color: #fff;
-}
+} */
   
 #vc-data{
     width: 80%;
@@ -95,6 +94,7 @@ body {
 /*-------briowser table----*/
 
 
+.
 .table-expand {
   margin-top: 5rem;
 }
@@ -157,6 +157,4 @@ body {
 }
 
 
-
-  
 /*-------briowser table end----*/
