@@ -1,49 +1,49 @@
 module.exports = (sequelize, DataTypes) => {
   const vc = sequelize.define("vc_profile", {
     // Giving the vc model a name of type STRING
-    vc_name: {
+    vcName: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1],
       },
     },
-    vc_website: {
+    vcWebsite: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1],
       },
     },
-    vc_city: {
+    vcCity: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1],
       },
     },
-    vc_state: {
+    vcState: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1],
       },
     },
-    vc_industries: {
+    vcIndustries: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1],
       },
     },
-    vc_stage: {
+    vcStage: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1],
       },
     },
-    vc_lead: {
+    vcLead: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
