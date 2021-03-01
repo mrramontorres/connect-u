@@ -50,6 +50,13 @@ module.exports = (sequelize, DataTypes) => {
         len: [1],
       },
     },
+    vcLogo: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1],
+      },
+    },
   });
 
   /*    Post.associate = (models) => {

@@ -13,13 +13,13 @@
       </nav>
 
 
-
       <div style="margin-bottom: 80px"></div>
 
 {{!-- /*-----------------VC logo images---------------*/ --}}
 
 <div class="grid-container">
   <div class="grid-x grid-padding-x medium-unstack equal-height-cards">
+
     <div class="cell medium-4">
       <div class="card">
         <div class="card-section">
@@ -29,6 +29,7 @@
         </div>
       </div>
     </div>
+    
     <div class="cell medium-4">
       <div class="card">
         <div class="card-section">
@@ -38,6 +39,7 @@
         </div>
       </div>
     </div>
+
     <div class="cell medium-4">
       <div class="card">
         <div class="card-section">
@@ -47,6 +49,7 @@
         </div>
       </div>
     </div>
+    
     <div class="cell medium-4">
       <div class="card">
         <div class="card-section">
@@ -56,6 +59,7 @@
         </div>
       </div>
     </div>
+    
     <div class="cell medium-4">
       <div class="card">
         <div class="card-section">
@@ -65,6 +69,7 @@
         </div>
       </div>
     </div>
+   
     <div class="cell medium-4">
       <div class="card">
         <div class="card-section">
@@ -74,6 +79,27 @@
         </div>
       </div>
     </div>
+
+    
+    {{#each vcs}}
+        <div class="cell medium-4">
+      <div class="card">
+        <div class="card-section">
+          <img src="assets/img/{{this.dataValues.vcLogo}}" alt="logo" width="600" height="440">
+          <p>{{this.dataValues.vcName}}</p>
+          <p>{{this.dataValues.vcWebsite}}</p>
+          <p>{{this.dataValues.vcCity}}</p>
+          <p>{{this.dataValues.vcState}}</p>
+          <p>{{this.dataValues.vcIndustries}}</p>
+          <p>{{this.dataValues.vcStage}}</p>
+          <p>{{this.dataValues.vcLead}}</p>
+        </div>
+        <div class="card-divider">
+        </div>
+      </div>
+    </div>
+  {{/each}}
+
   </div>
 </div>
 
@@ -120,8 +146,8 @@
       <td>{{this.dataValues.vcState}}</td>
       <td>{{this.dataValues.vcIndustries}}</td>
       <td>{{this.dataValues.vcState}}</td>
-      <td>{{this.dataValues.vcLead}}</td>
-      <td>carried over <span class="expand-icon"></span></td>
+      <td>{{this.dataValues.vcLeadc}}</td>
+      <td>More Information <span class="expand-icon"></span></td>
     </tr>
 
     <tr class="table-expand-row-content">
@@ -140,14 +166,6 @@
 <div style="margin-bottom: 90px"></div>
 
 {{!-- /*---------------end of table------------------*/  --}}
-
-ramon
-<div>
-  {{#each vcs}}
-  <p>{{this.dataValues.vcName}}</p>
-  {{/each}}
-</div>
-
 
 
  <script src="/script/browser.js"></script>
