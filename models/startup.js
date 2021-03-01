@@ -41,13 +41,6 @@ module.exports = (sequelize, DataTypes) => {
       validate: {
         len: [1, 100],
       },
-      startupPriority: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1, 100],
-        },
-      },
     },
     startupNotes: {
       type: DataTypes.STRING,
