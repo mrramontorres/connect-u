@@ -1,62 +1,62 @@
 module.exports = (sequelize, DataTypes) => {
   const Startup = sequelize.define("startup_profile", {
-    startup_name: {
+    startupName: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1, 100],
       },
     },
-    startup_website: {
+    startupWebsite: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1, 100],
       },
     },
-    startup_city: {
+    startupCity: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1, 100],
       },
     },
-    startup_state: {
+    startupState: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1, 100],
       },
     },
-    startup_industry: {
+    startupIndustry: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1, 100],
       },
     },
-    startup_stage: {
+    startupStage: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1, 100],
       },
-      startup_priority: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1, 100],
-        },
-      },
     },
-    startup_notes: {
+    startupNotes: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1],
       },
     },
-    startup_status: {
+    startupStatus: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 100],
+      },
+    },
+    startupProfileId: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {

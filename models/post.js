@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
   Post.associate = (models) => {
     // Associating Author with Posts
     // When an Author is deleted, also delete any associated Posts
-    console.log({ models });
+    //console.log({ models });
     Post.belongsTo(models.startup_profile, {
       foreignKey: {
         allowNull: false,
