@@ -1,6 +1,6 @@
- /*---------------startup input ---------------*/
-/* 
- @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap'); */
+ /*---------------VC input ---------------*/
+
+ @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
  *{
     margin: 0;
@@ -9,23 +9,26 @@
     font-family: 'Montserrat', sans-serif;
   }
   
-  /* body{
-    background: #fec107;
-    padding: 0 40px;
-  }  */
+  body{
+    background: linear-gradient( to right, #4f284b, #ffddca);
+    padding: 0 10px;
+  } 
   
   .wrapper{
     max-width: 400px;
     width: 100%;
     background: #fff;
     margin: 20px auto;
-    margin-left: 10px;
-    box-shadow: 1px 1px 2px rgba(10, 10, 10, 0.125);
-    padding: 0 40px;
+    /* margin-left: 50px; */
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+    padding: 30px;
+    border-radius: 25px;
   }
   
+
+  
   .wrapper .title{
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 500;
     margin-bottom: 25px;
     color: #39393b;
@@ -47,7 +50,7 @@
      width: 200px;
      color: #757575;
      margin-right: 10px;
-    font-size: 14px;
+     font-size: 14px;
   }
   
   .wrapper .form .inputfield .input,
@@ -63,7 +66,7 @@
   
   .wrapper .form .inputfield .textarea{
     width: 100%;
-    height: 100px;
+    height: 125px;
     resize: none;
   }
   
@@ -101,7 +104,7 @@
   .wrapper .form .inputfield .input:focus,
   .wrapper .form .inputfield .textarea:focus,
   .wrapper .form .inputfield .custom_select select:focus{
-    border: 1px solid #fec107;
+    border: 1px solid #ab9cd3;
   }
   
   .wrapper .form .inputfield p{
@@ -124,7 +127,7 @@
   .wrapper .form .inputfield .check .checkmark{
     width: 15px;
     height: 15px;
-    border: 1px solid #fec107;
+    border: 1px solid a4345d;
     display: block;
     position: relative;
   }
@@ -141,7 +144,7 @@
     display: none;
   }
   .wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark{
-    background: #fec107;
+    background: #a4345d;
   }
   
   .wrapper .form .inputfield .check input[type="checkbox"]:checked ~ .checkmark:before{
@@ -153,15 +156,15 @@
      padding: 8px 10px;
     font-size: 15px; 
     border: 0px;
-    background:  #fec107;
-    color: #fff;
+    background:  #4f284b;
+    color: rgb(255, 255, 255);
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 15px;
     outline: none;
   }
   
   .wrapper .form .inputfield .btn:hover{
-    background: #ffd658;
+    background: #9e2652;
   }
   
   .wrapper .form .inputfield:last-child{
@@ -181,4 +184,4 @@
     }
   }
   
-   /*---------------startup input end ---------------*/
+   /*---------------VC input end ---------------*/

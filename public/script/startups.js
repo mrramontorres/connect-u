@@ -4,6 +4,10 @@ $("[data-menu-underline-from-center] a").addClass("underline-from-center");
 
 /*-----------------navbarend-----------*/
       
+
+
+
+
 /*-----------callout----------*/
     
 $(function(){
@@ -15,9 +19,14 @@ $(function(){
 })
       
       
+
+
+
 /*----------------table----------------*/
 $('[data-open-details]').click(function (e) {
       e.preventDefault();
       $(this).next().toggleClass('is-active');
       $(this).toggleClass('is-active');
 });
+
+
