@@ -1,7 +1,7 @@
 // Dependencies
 const path = require("path");
 
-const db = require('../models');
+const db = require("../models");
 
 
 // Routes
