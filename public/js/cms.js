@@ -76,8 +76,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const newPost = {
       title: titleInput.value.trim(),
       body: bodyInput.value.trim(),
-      //StartupId: startupSelect.value,
+      // StartupId: startupSelect.value,
     };
+
+    console.log(newPost);
 
     // Update a post if flag is true, otherwise submit a new one
     if (updating) {
@@ -100,7 +102,8 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       body: JSON.stringify(post),
     })
-      .then(() => {
+      .then((res) => {
+        console.log(res);
         window.location.href = "/blog";
       })
       .catch((err) => console.error(err));

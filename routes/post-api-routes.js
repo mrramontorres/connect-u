@@ -6,6 +6,7 @@ const db = require("../models");
 // Routes
 module.exports = (app) => {
   app.get("/api/posts", (req, res) => {
+    console.log("GET", req);
     const query = {};
     if (req.query.startup_id) {
       query.StartupId = req.query.startup_id;
@@ -15,7 +16,7 @@ module.exports = (app) => {
     // In this case, just db.Author
     db.Post.findAll({
       where: query,
-      include: [db.Startup],
+      include: [db.startup_profile],
     }).then((dbPost) => res.json(dbPost));
   });
 
@@ -28,13 +29,21 @@ module.exports = (app) => {
       where: {
         id: req.params.id,
       },
-      include: [db.Startup],
+      include: [db.startup_profile],
     }).then((dbPost) => res.json(dbPost));
   });
 
   // POST route for saving a new post
   app.post("/api/posts", (req, res) => {
-    db.Post.create(req.body).then((dbPost) => res.json(dbPost));
+    console.log("POST BODY", req.body);
+    db.Post.create(req.body)
+      .then((dbPost) => {
+        console.log(dbPost);
+        res.json(dbPost);
+      })
+      .catch((err) => {
+        throw err;
+      });
   });
 
   // DELETE route for deleting posts

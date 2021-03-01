@@ -56,13 +56,13 @@ module.exports = (sequelize, DataTypes) => {
         len: [1, 100],
       },
     },
-    startupProfileId: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1, 100],
-      },
-    },
+    // startupProfileId: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   validate: {
+    //     len: [1, 100],
+    //   },
+    // },
   });
 
   Startup.associate = (models) => {

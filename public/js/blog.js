@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         newPostBody.textContent = post.body;
 
         const newPostImage = document.createElement("img");
-        newPostImage.classList.add("img");
+        newPostImage.classList.add("card-img-top");
 
         const newPostCardHeading = document.createElement("div");
         newPostCardHeading.classList.add("card-header");
@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         newPostCardHeading.append(newPostCardTitle);
         newPostCardHeading.append(newPostStartup);
         newPostCardBody.append(newPostBody);
+        newPostCard.append(newPostImage);
         newPostCard.append(newPostCardHeading);
         newPostCard.append(newPostCardBody);
         newPostCard.setAttribute("data-post", JSON.stringify(post));
