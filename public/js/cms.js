@@ -8,6 +8,35 @@ const show = (el) => {
 // Wait for the DOM to completely load before we run our JS
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM loaded! 🚀");
+  const getStartup = (id, type) => {
+    const queryUrl = `/api/startups/`;
+
+    fetch("/api/startups", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        if (data) {
+          console.log("before");
+          console.log("Success in getting startup:", data);
+
+          // // Populate the form for editing
+          // titleInput.value = data.title;
+          // bodyInput.value = data.body;
+          // StartupId = data.StartupId || data.id;
+
+          // // We are updating
+          // updating = true;
+        }
+      })
+      .catch((err) => console.error(err));
+  };
+
+  getStartup();
 
   // Get references to the body, title, form and author
   const bodyInput = document.getElementById("body");
@@ -49,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch((err) => console.error(err));
   };
 
-  // If post exists, grab the content of the post
+  //If post exists, grab the content of the post
   if (url.indexOf("?post_id=") !== -1) {
     postId = url.split("=")[1];
     getPostData(postId, "post");
@@ -76,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const newPost = {
       title: titleInput.value.trim(),
       body: bodyInput.value.trim(),
-      //StartupId: startupSelect.value,
+      // StartupId: startupSelect.value,
     };
 
     // Update a post if flag is true, otherwise submit a new one
@@ -85,6 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
       updatePost(newPost);
     } else {
       submitPost(newPost);
+      console.log(newPost);
     }
   };
 
@@ -100,70 +130,73 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       body: JSON.stringify(post),
     })
-      .then(() => {
+      .then((res) => {
+        console.log(res);
         window.location.href = "/blog";
-      })
-      .catch((err) => console.error(err));
-  };
-
-  // Render a list of authors or redirect if no authors
-  // const renderStartupsList = (data) => {
-  //   console.log("renderStartupList -> data", data);
-  //   if (!data.length) {
-  //     window.location.href = "/startups";
-  //   }
-  //   if (document.querySelector(".hidden")) {
-  //     show(document.querySelector(".hidden"));
-  //   }
-
-  //   const rowsToAdd = [];
-
-  //   data.forEach((Startup) => rowsToAdd.push(createStartupRow(Startup)));
-
-  //   startupSelect.innerHTML = "";
-  //   console.log("renderStartupList -> rowsToAdd", rowsToAdd);
-  //   console.log("startupSelect", startupSelect);
-
-  //   rowsToAdd.forEach((row) => startupSelect.append(row));
-  //   startupSelect.value = StartupId;
-  // };
-
-  // // Build author dropdown
-  // const createStartupRow = ({ id, name }) => {
-  //   const listOption = document.createElement("option");
-  //   listOption.value = id;
-  //   listOption.textContent = name;
-  //   return listOption;
-  // };
-
-  // A function to get Authors and then call the render function
-  const getStartups = () => {
-    fetch("api/startups", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => renderStartupsList(data))
-      .catch((err) => console.error(err));
-  };
-
-  // Get the authors, and their posts
-  getStartups();
-
-  // Update a post then redirect to blog
-  const updatePost = (post) => {
-    fetch("/api/posts", {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(post),
-    })
-      .then(() => {
-        window.location.href = "/blog";
+        console.log(post);
       })
       .catch((err) => console.error(err));
   };
 });
+
+// Render a list of authors or redirect if no authors
+// const renderStartupsList = (data) => {
+//   console.log("renderStartupList -> data", data);
+//   if (!data.length) {
+//     window.location.href = "/startups";
+//   }
+//   if (document.querySelector(".hidden")) {
+//     show(document.querySelector(".hidden"));
+//   }
+
+//   const rowsToAdd = [];
+
+//   data.forEach((Startup) => rowsToAdd.push(createStartupRow(Startup)));
+
+//   startupSelect.innerHTML = "";
+//   console.log("renderStartupList -> rowsToAdd", rowsToAdd);
+//   console.log("startupSelect", startupSelect);
+
+//   rowsToAdd.forEach((row) => startupSelect.append(row));
+//   startupSelect.value = StartupId;
+// };
+
+// // Build author dropdown
+// const createStartupRow = ({ id, name }) => {
+//   const listOption = document.createElement("option");
+//   listOption.value = id;
+//   listOption.textContent = name;
+//   return listOption;
+// };
+
+// A function to get Authors and then call the render function
+// const getStartups = () => {
+//   fetch("api/startups", {
+//     method: "GET",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//   })
+//     .then((response) => response.json())
+//     .then((data) => renderStartupsList(data))
+//     .catch((err) => console.error(err));
+// };
+
+// Get the authors, and their posts
+//   getStartups();
+
+//   // Update a post then redirect to blog
+//   const updatePost = (post) => {
+//     fetch("/api/posts", {
+//       method: "PUT",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(post),
+//     })
+//       .then(() => {
+//         window.location.href = "/blog";
+//       })
+//       .catch((err) => console.error(err));
+//   };
+// });

@@ -24,43 +24,66 @@ document.addEventListener("DOMContentLoaded", () => {
         posts = data;
         console.log("Success in getting posts:", data);
 
-        const newPostCard = document.createElement("div");
-        newPostCard.classList.add("card");
-
-        const newPostCardBody = document.createElement("div");
-        newPostCardBody.classList.add("card-body");
-
-        const newPostBody = document.createElement("p");
-        newPostBody.textContent = post.body;
-
-        const newPostImage = document.createElement("img");
-        newPostImage.classList.add("img");
-
-        const newPostCardHeading = document.createElement("div");
-        newPostCardHeading.classList.add("card-header");
-
-        const newPostCardTitle = document.createElement("h2");
-        newPostCardTitle.classList.add("card-title");
-        newPostCardTitle.textContent = data.title;
-
-        const newPostStartup = document.createElement("h5");
-
-        newPostStartup.textContent = `Written by: ${post.Startup.name}`;
-        newPostStartup.style.float = "right";
-        newPostStartup.style.color = "blue";
-        newPostStartup.style.marginTop = "-10px";
-
-        newPostCardHeading.append(newPostCardTitle);
-        newPostCardHeading.append(newPostStartup);
-        newPostCardBody.append(newPostBody);
-        newPostCard.append(newPostCardHeading);
-        newPostCard.append(newPostCardBody);
-        newPostCard.setAttribute("data-post", JSON.stringify(post));
-
-        console.log("newPostCard", newPostCard);
-        return newPostCard;
+        initializeRows();
       })
-      .catch((err) => console.error(err));
+
+      .catch((error) => console.error("Error:", error));
+
+    // Get a blog post from a specific author
+    const url = window.location.search;
+    let StartupId;
+    if (url.indexOf("?startup_id=") !== -1) {
+      StartupId = url.split("=")[1];
+      getPosts(StartupId);
+    } else {
+      getPosts();
+    }
+    // Create HTML rows for the blog container
+
+    const initializeRows = () => {
+      blogContainer.innerHTML = "";
+      const postsToAdd = [];
+
+      posts.forEach((post) => postsToAdd.push(createNewRow(post)));
+      postsToAdd.forEach((post) => blogContainer.append(post));
+    };
+
+    const createNewRow = (post) => {
+      console.log("createNewRow -> post", post);
+
+      const newPostCard = document.createElement("div");
+      newPostCard.classList.add("card");
+
+      const newPostCardBody = document.createElement("div");
+      newPostCardBody.classList.add("card-body");
+
+      const newPostBody = document.createElement("p");
+      newPostBody.textContent = post.body;
+
+      const newPostImage = document.createElement("img");
+      newPostImage.classList.add("card-img-top");
+
+      const newPostCardTitle = document.createElement("h2");
+      newPostCardTitle.classList.add("card-title");
+      newPostCardTitle.textContent = post.title;
+
+      const newPostStartup = document.createElement("h5");
+
+      newPostStartup.textContent = `Written by: ${post.startup_profile.name}`;
+      newPostStartup.style.float = "right";
+      newPostStartup.style.color = "blue";
+      newPostStartup.style.marginTop = "-10px";
+
+      newPostCardBody.append(newPostBody);
+      newPostCard.append(newPostImage);
+      newPostCard.append(newPostCardTitle);
+      newPostCard.append(newPostStartup);
+      newPostCard.append(newPostCardBody);
+      newPostCard.setAttribute("data-post", JSON.stringify(post));
+
+      console.log("newPostCard", newPostCard);
+      return newPostCard;
+    };
   };
 
   //   if (!data || !data.length) {
@@ -73,14 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // };
 
   //Get a blog post from a specific author
-  const url = window.location.search;
-  let StartupId;
-  if (url.indexOf("?startup_id=") !== -1) {
-    StartupId = url.split("=")[1];
-    getPosts(StartupId);
-  } else {
-    getPosts();
-  }
 
   // // Front end call to DELETE a post
   // const deletePost = (id) => {

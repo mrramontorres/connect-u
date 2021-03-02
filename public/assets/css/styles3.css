@@ -1,3 +1,6 @@
+body {
+  padding-top: 25px;
+}
 button.submit {
   float: right;
 }
@@ -20,14 +23,6 @@ button.edit {
   margin: 5px;
 }
 
-.author-container {
-  margin-top: 50px;
-}
-
-.author-list {
-  margin-top: 25px;
-}
-
 .blog-container {
   margin-top: 30px;
 }
@@ -48,4 +43,9 @@ button.edit {
 
 .top-30 {
   margin-top: 30px;
+}
+
+.navbar-fixed-top {
+  background-color: #2c3840;
+  color: white;
 }

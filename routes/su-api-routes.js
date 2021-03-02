@@ -6,13 +6,13 @@ const db = require("../models");
 
 // Routes
 module.exports = (app) => {
-  // app.get("/api/startups", (req, res) => {
-  //   console.log("su-api-routes activated");
-  //   const query = {};
-  //   if (req.query.startup_id) {
-  //     query.StartupId = req.query.startup_id;
-  //   }
-  // });
+  app.get("/api/startup", (req, res) => {
+    console.log("su-api-routes activated");
+    const query = {};
+    if (req.query.startup_id) {
+      query.StartupId = req.query.startup_id;
+    }
+  });
 
   app.get("/startup", (req, res) => {
     console.log("su-api-routes activated");
@@ -25,6 +25,7 @@ module.exports = (app) => {
       startup_industry: "Digital Health",
       startup_stage: "Series E",
     }),
+
     db.startupProfiles.create({
       startup_name: "Beyond Meat",
       startup_website: "https://www.beyondmeat.com/",
