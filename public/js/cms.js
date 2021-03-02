@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const getStartup = (id, type) => {
     const queryUrl = `/api/startups/`;
 
-    fetch("/api/startups", {
+    fetch("/startup", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (data) {
           console.log("before");
           console.log("Success in getting startup:", data);
-
+          console.log("after");
           // // Populate the form for editing
           // titleInput.value = data.title;
           // bodyInput.value = data.body;

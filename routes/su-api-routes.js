@@ -25,37 +25,36 @@ module.exports = (app) => {
       startup_industry: "Digital Health",
       startup_stage: "Series E",
     }),
-
-    db.startupProfiles.create({
-      startup_name: "Beyond Meat",
-      startup_website: "https://www.beyondmeat.com/",
-      startup_city: "San Francisco",
-      startup_state: "California",
-      startup_industry: "Food Teach",
-      startup_stage: "Public",
-    }),
-    db.startupProfiles.create({
-      startup_name: "Chime",
-      startup_website: "https://www.chime.com/",
-      startup_city: "San Francisco",
-      startup_state: "California",
-      startup_industry: "FinTech",
-      startup_stage: "Series F",
-    }),
-    db.startupProfiles.create({
-      startup_name: "Snapsheet",
-      startup_website: "https://www.snapsheetclaims.com/",
-      startup_city: "Chicago",
-      startup_state: "Illinois",
-      startup_industry: "InsurTech",
-      startup_stage: "Series E",
-    }),
-    db.startupProfiles.findAll({}).then((data) => {
-      console.log("Something");
-      console.log("these are the profiles", db.startupProfiles);
-      console.log("Data is:", data);
-      res.render("client", { startupProfile: data });
-    });
+      db.startupProfiles.create({
+        startup_name: "Beyond Meat",
+        startup_website: "https://www.beyondmeat.com/",
+        startup_city: "San Francisco",
+        startup_state: "California",
+        startup_industry: "Food Teach",
+        startup_stage: "Public",
+      }),
+      db.startupProfiles.create({
+        startup_name: "Chime",
+        startup_website: "https://www.chime.com/",
+        startup_city: "San Francisco",
+        startup_state: "California",
+        startup_industry: "FinTech",
+        startup_stage: "Series F",
+      }),
+      db.startupProfiles.create({
+        startup_name: "Snapsheet",
+        startup_website: "https://www.snapsheetclaims.com/",
+        startup_city: "Chicago",
+        startup_state: "Illinois",
+        startup_industry: "InsurTech",
+        startup_stage: "Series E",
+      }),
+      db.startupProfiles.findAll({}).then((data) => {
+        console.log("Something");
+        console.log("these are the profiles", db.startupProfiles);
+        console.log("Data is:", data);
+        res.render("client", { startupProfile: data });
+      });
   });
 
   // Get route for retrieving startup data
