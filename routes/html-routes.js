@@ -14,8 +14,6 @@ module.exports = (app) => {
 
   app.get("/register1", (req, res) => res.render("register1-vc"));
 
-  // app.get("/blog", (req, res) => res.render("blog"));
-
   app.get("/browser", function (req, res) {
     db.vc_profile.findAll().then(function (vcs) {
       console.log(vcs);
