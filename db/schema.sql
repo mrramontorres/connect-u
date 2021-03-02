@@ -24,15 +24,15 @@ CREATE TABLE startup_profile (
   startup_state VARCHAR(10) NOT NULL,
   startup_industry VARCHAR(60) NOT NULL, 
   startup_stage VARCHAR(20) NOT NULL,
-  startup_priority VARCHAR(20) NOT NULL,
-  startup_notes VARCHAR(180) NOT NULL,
-  startup_status VARCHAR(180) NOT NULL,
   PRIMARY KEY (id)
 );
 
 CREATE TABLE interactions (
   id INT NOT NULL AUTO_INCREMENT,
   interactionDate VARCHAR(30) NOT NULL,
+  priority VARCHAR(20) NOT NULL,
+  notes VARCHAR(180) NOT NULL,
+  interaction_status VARCHAR(180) NOT NULL,
   PRIMARY KEY (id)
 );
 
