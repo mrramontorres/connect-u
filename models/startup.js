@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const Startup = sequelize.define("startup_profile", {
+  const startupProfiles = sequelize.define("startupProfiles", {
     startup_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -41,34 +41,13 @@ module.exports = (sequelize, DataTypes) => {
       validate: {
         len: [1, 100],
       },
-      startup_priority: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1, 100],
-        },
-      },
-    },
-    startup_notes: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1],
-      },
-    },
-    startup_status: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1, 100],
-      },
     },
   });
 
-  Startup.associate = (models) => {
+  startupProfiles.associate = (models) => {
     // Associating Author with Posts
     // When an Author is deleted, also delete any associated Posts
-    Startup.hasMany(models.Post, {
+    startupProfiles.hasMany(models.Post, {
       onDelete: "cascade",
     });
   };
@@ -82,5 +61,5 @@ module.exports = (sequelize, DataTypes) => {
   //     });
   //   };
 
-  return Startup;
+  return startupProfiles;
 };

@@ -84,24 +84,25 @@
     </tr>
   </thead>
   <tbody>
-    <tr class="table-expand-row" data-open-details>
-      <td>Luna Ferregani</td>
-      <td>luna@gmail.com</td>
-      <td>Milan</td>
-      <td>Italy</td>
-      <td>Fashion Design </td>
-      <td>1<span class="expand-icon"></span></td>
+    <tr class="table-expand-row"  id="suDisplay" data-open-details>
+      {{#each startupProfile}}
+      <td>{{dataValues.startup_name}}</td>
+      <td>{{dataValues.startup_website}}</td>
+      <td>{{dataValues.startup_city}}</td>
+      <td>{{dataValues.startup_state}}</td>
+      <td>{{dataValues.startup_industry}}</td>
+      <td>{{dataValues.startup_stage}}<span class="expand-icon"></span></td>
     </tr>
-
     <tr class="table-expand-row-content">
       <td colspan="8" class="table-expand-row-nested">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, 
           adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?</p>
       </td>
     </tr>
-    <tr class="table-expand-row" data-open-details>
+                {{/each}}
+    {{!-- <tr class="table-expand-row" data-open-details>
       <td>Michael Blaun</td>
-      <td>mickael@gmail.com</td>
+      <td>mickael.com</td>
       <td>New york</td>
       <td>USA</td>
       <td>Developer</td>
@@ -114,11 +115,11 @@
           adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?</p>
       </td>
       </td>
-    </tr>
-
+    </tr> --}}
+{{!-- 
     <tr class="table-expand-row" data-open-details>
       <td>Bruce Jackson</td>
-      <td>bruce@gmail.com</td>
+      <td>bruce.com</td>
       <td>USA</td>
       <td>LA</td>
       <td>Marketing</td>
@@ -135,7 +136,7 @@
 
     <tr class="table-expand-row" data-open-details>
       <td>Kevin Lang</td>
-      <td>kevina@gmail.com</td>
+      <td>kevina.com</td>
       <td>Milan</td>
       <td>Italy</td>
       <td>Tech</td>
@@ -152,7 +153,7 @@
 
     <tr class="table-expand-row" data-open-details>
       <td>Leo Ferregani</td>
-      <td>luna@gmail.com</td>
+      <td>luna.com</td>
       <td>USA</td>
       <td>New York</td>
       <td>Tech</td>
@@ -165,11 +166,11 @@
            adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?</p>
       </td>
       </td>
-    </tr>
-
+    </tr> --}}
+{{!-- 
     <tr class="table-expand-row" data-open-details>
       <td>willian Ferrer</td>
-      <td>willian@gmail.com</td>
+      <td>willian.com</td>
       <td>LA</td>
       <td>USA</td>
       <td>Fashion Design </td>
@@ -181,12 +182,12 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, 
           adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?</p>
       </td>
-      </td>
-    </tr>
+      </td> --}}
+    {{!-- </tr>
 
     <tr class="table-expand-row" data-open-details>
       <td>Luna Ferregani</td>
-      <td>luna@gmail.com</td>
+      <td></td>
       <td>Milan</td>
       <td>Italy</td>
       <td>Fashion Design / Tech</td>
@@ -203,7 +204,7 @@
 
     <tr class="table-expand-row" data-open-details>
       <td>Luna Ferregani</td>
-      <td>luna@gmail.com</td>
+      <td></td>
       <td>Milan</td>
       <td>Italy</td>
       <td>Fashion Design / Tech</td>
@@ -220,7 +221,7 @@
 
     <tr class="table-expand-row" data-open-details>
       <td>Luna Ferregani</td>
-      <td>luna@gmail.com</td>
+      <td>lunacom</td>
       <td>Milan</td>
       <td>Italy</td>
       <td>Fashion Design / Tech</td>
@@ -233,7 +234,7 @@
           adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?</p>
       </td>
       </td>
-    </tr>
+    </tr> --}}
 
   </tbody>
 </table>
