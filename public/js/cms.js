@@ -49,15 +49,15 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch((err) => console.error(err));
   };
 
-  // If post exists, grab the content of the post
-  // if (url.indexOf("?post_id=") !== -1) {
-  //   postId = url.split("=")[1];
-  //   getPostData(postId, "post");
-  // }
-  // // Otherwise if we have an author_id in our url, preset the author select box to be our Author
-  // else if (url.indexOf("?startup_id=") !== -1) {
-  //   StartupId = url.split("=")[1];
-  // }
+  //If post exists, grab the content of the post
+  if (url.indexOf("?post_id=") !== -1) {
+    postId = url.split("=")[1];
+    getPostData(postId, "post");
+  }
+  // Otherwise if we have an author_id in our url, preset the author select box to be our Author
+  else if (url.indexOf("?startup_id=") !== -1) {
+    StartupId = url.split("=")[1];
+  }
 
   // Event handler for when the post for is submitted
   const handleFormSubmit = (e) => {
@@ -104,6 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((res) => {
         console.log(res);
         window.location.href = "/blog";
+        console.log(post);
       })
       .catch((err) => console.error(err));
   };
