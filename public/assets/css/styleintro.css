@@ -34,8 +34,8 @@
   }
   
   .topbar-responsive .menu .topbar-responsive-button {
-    color: #ebf6f7;
-    border-color: #ebf6f7;
+    color: #fcc9b9;
+    border-color: #fcc9b9;
     border-radius: 5000px;
     transition: color 0.15s ease-in, border-color 0.15s ease-in;
   }
@@ -132,18 +132,20 @@
   /*------intro page center image----*/
   
   .hero1 {
-    height: 700px;
+    height: 600px;
     width: 100%;
     background-image: url("/assets/img/mainpagebackground.png");
     background-position: center;
-    margin: auto;
-    /* margin-top: 20px;
-    margin-bottom: 30px; */
+    /* margin: auto; */
+    margin-top: 40px;
+    /* margin-bottom: 30px; */
 
   }
   
-  /* @media all and (max-width: 700px){
-
+  /* @media all and (max-width: 600px){
+    .hero1 {
+    height: 600px;
+  
   } */
 
   /**-----------intro page footer-footer----------*/
