@@ -1,5 +1,8 @@
 	
-     <link rel="stylesheet" href="/assets/css/stylelogin.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/stylelogin.css">
+
+    
+      {{!-- <div style="margin-bottom: 120px"></div> --}}
 
     <div class="hero">
         <div class="form-box">
@@ -19,13 +22,18 @@
             <form id="signup" class="input-group">
                  <input id="username-input" type="text" class="input-field" placeholder="User Name" required>
                  <input id="signupemail-input" type="email" class="input-field" placeholder="Email Id" required>
-                 <input id="signuppassword-input" type="text" class="input-field" placeholder="Enter Password" required> 
-                  <div id = "alert"></div>
+                 <input id="signuppassword-input" type="password" class="input-field" placeholder="Enter Password" required> 
+                  {{!-- <div id = "alert"></div> --}}
+
+                    <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error:</span> <span class="msg"></span>
+                    </div>
                  <br>
                 
                  <legend>Choose Your Field</legend>
-                 <input type="radio" class="check-box1" name="pokemon" value="Red" id="pokemonRed" required><label for="pokemonRed">VC</label>
-                 <input type="radio" class="check-box1"  name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Startup</label>
+                 <input type="radio" class="check-box1" name="registertype" value="vc" id="pokemonRed" required><label for="pokemonRed">VC</label>
+                 <input type="radio" class="check-box1"  name="registertype" value="startup" id="pokemonBlue"><label for="pokemonBlue">Startup</label>
                  <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
                  <button type="submit" class= "submit-btn">Sign up</button>
             </form>
@@ -36,7 +44,7 @@
 
     <script src="/js/signup.js"></script>
 
-    <script src="/script/login-signup.js"></script>
+    <script src="/js/login-signup.js"></script>
 
 
 

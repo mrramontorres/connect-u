@@ -1,16 +1,16 @@
 
-/*---------Browser navbar--use in VC AND STARTUP --------------*/
+/*---------navbar--use in VC AND STARTUP --------------*/
 
 .hover-underline-menu {
   width: 100%;
 }
 
 .hover-underline-menu .menu {
-  background-color: #2C3840;
+  background-color:  #2C3840;
 }
 
 .hover-underline-menu .menu a {
-  color: #fefefe;
+  color:  #fcc9b9;
   padding: 1.2rem 1.5rem;
 }
 
@@ -22,7 +22,7 @@
   content: "";
   position: absolute;
   top: calc(100% - 0.125rem);
-  border-bottom: 0.125rem solid #fefefe;
+  border-bottom: 0.125rem solid  #b8255a;
   left: 50%;
   right: 50%;
   transition: all 0.5s ease;
@@ -90,6 +90,8 @@
 }
 
 /*--------------end image--------------*/
+
+
 
 
 /*------Hover middle braek-------------------------*/
