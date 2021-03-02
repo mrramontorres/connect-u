@@ -79,14 +79,13 @@ document.addEventListener("DOMContentLoaded", () => {
       // StartupId: startupSelect.value,
     };
 
-    console.log(newPost);
-
     // Update a post if flag is true, otherwise submit a new one
     if (updating) {
       newPost.id = postId;
       updatePost(newPost);
     } else {
       submitPost(newPost);
+      console.log(newPost);
     }
   };
 
@@ -109,6 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch((err) => console.error(err));
   };
 });
+
 // Render a list of authors or redirect if no authors
 // const renderStartupsList = (data) => {
 //   console.log("renderStartupList -> data", data);
@@ -140,19 +140,19 @@ document.addEventListener("DOMContentLoaded", () => {
 // };
 
 // A function to get Authors and then call the render function
-//   const getStartups = () => {
-//     fetch("api/startups", {
-//       method: "GET",
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//     })
-//       .then((response) => response.json())
-//       .then((data) => renderStartupsList(data))
-//       .catch((err) => console.error(err));
-//   };
+// const getStartups = () => {
+//   fetch("api/startups", {
+//     method: "GET",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//   })
+//     .then((response) => response.json())
+//     .then((data) => renderStartupsList(data))
+//     .catch((err) => console.error(err));
+// };
 
-//   // Get the authors, and their posts
+// Get the authors, and their posts
 //   getStartups();
 
 //   // Update a post then redirect to blog

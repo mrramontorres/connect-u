@@ -23,8 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((data) => {
         posts = data;
         console.log("Success in getting posts:", data);
+
         initializeRows();
       })
+
       .catch((error) => console.error("Error:", error));
 
     // Get a blog post from a specific author
@@ -36,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       getPosts();
     }
+    // Create HTML rows for the blog container
 
     const initializeRows = () => {
       blogContainer.innerHTML = "";
@@ -51,14 +54,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const newPostCard = document.createElement("div");
       newPostCard.classList.add("card");
 
-      const newPostCardHeading = document.createElement("div");
-      newPostCardHeading.classList.add("card-header");
-
       const newPostCardBody = document.createElement("div");
       newPostCardBody.classList.add("card-body");
 
       const newPostBody = document.createElement("p");
-      newPostBody.textContent = Post.body;
+      newPostBody.textContent = post.body;
 
       const newPostImage = document.createElement("img");
       newPostImage.classList.add("card-img-top");
@@ -69,16 +69,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const newPostStartup = document.createElement("h5");
 
-      newPostStartup.textContent = `Written by: ${post.Startup.name}`;
+      newPostStartup.textContent = `Written by: ${post.startup_profile.name}`;
       newPostStartup.style.float = "right";
       newPostStartup.style.color = "blue";
       newPostStartup.style.marginTop = "-10px";
 
-      newPostCardHeading.append(newPostCardTitle);
-      newPostCardHeading.append(newPostStartup);
       newPostCardBody.append(newPostBody);
       newPostCard.append(newPostImage);
-      newPostCard.append(newPostCardHeading);
+      newPostCard.append(newPostCardTitle);
+      newPostCard.append(newPostStartup);
       newPostCard.append(newPostCardBody);
       newPostCard.setAttribute("data-post", JSON.stringify(post));
 

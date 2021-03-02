@@ -16,6 +16,8 @@ module.exports = (app) => {
 
   app.get("/register2", (req, res) => res.render("register2-startups"));
 
+  // app.get("/blog", (req, res) => res.render("blog"));
+
   app.get("/browser", function (req, res) {
     db.vc_profile.findAll().then(function (vcs) {
       console.log(vcs);
@@ -29,7 +31,7 @@ module.exports = (app) => {
   app.get("/login", (req, res) => res.render("login-signup"));
 
   app.get("/blog", (req, res) =>
-    res.sendFile(path.join(__dirname, "../views/blog.html"))
+    res.sendFile(path.join(__dirname, "../public/blog.html"))
   );
 
   // second route loads second.html
