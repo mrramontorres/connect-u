@@ -8,6 +8,35 @@ const show = (el) => {
 // Wait for the DOM to completely load before we run our JS
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM loaded! 🚀");
+  const getStartup = (id, type) => {
+    const queryUrl = `/api/startups/`;
+
+    fetch("/api/startups", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        if (data) {
+          console.log("before");
+          console.log("Success in getting startup:", data);
+
+          // // Populate the form for editing
+          // titleInput.value = data.title;
+          // bodyInput.value = data.body;
+          // StartupId = data.StartupId || data.id;
+
+          // // We are updating
+          // updating = true;
+        }
+      })
+      .catch((err) => console.error(err));
+  };
+
+  getStartup();
 
   // Get references to the body, title, form and author
   const bodyInput = document.getElementById("body");
