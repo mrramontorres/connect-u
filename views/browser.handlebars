@@ -4,14 +4,13 @@
 
 <nav class="hover-underline-menu" data-menu-underline-from-center>
         <ul class="menu align-center">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#browser.handlerbars">browser</a></li>
-          li><a href="#vc.handlebars">VC</a></li>
-          <li><a href="#startup.handlebars">Startup</a></li>
-          <li><a href="#">Blog</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/browser">browser</a></li>
+          <li><a href="/vc">VC</a></li>
+          <li><a href="/startup">Startup</a></li>
+          <li><a href="/blog">Blog</a></li>
         </ul>
       </nav>
-
 
 
       <div style="margin-bottom: 80px"></div>
@@ -20,6 +19,7 @@
 
 <div class="grid-container">
   <div class="grid-x grid-padding-x medium-unstack equal-height-cards">
+{{!--
     <div class="cell medium-4">
       <div class="card">
         <div class="card-section">
@@ -29,6 +29,7 @@
         </div>
       </div>
     </div>
+    
     <div class="cell medium-4">
       <div class="card">
         <div class="card-section">
@@ -38,6 +39,7 @@
         </div>
       </div>
     </div>
+
     <div class="cell medium-4">
       <div class="card">
         <div class="card-section">
@@ -47,6 +49,7 @@
         </div>
       </div>
     </div>
+    
     <div class="cell medium-4">
       <div class="card">
         <div class="card-section">
@@ -56,6 +59,7 @@
         </div>
       </div>
     </div>
+    
     <div class="cell medium-4">
       <div class="card">
         <div class="card-section">
@@ -65,6 +69,7 @@
         </div>
       </div>
     </div>
+   
     <div class="cell medium-4">
       <div class="card">
         <div class="card-section">
@@ -74,6 +79,26 @@
         </div>
       </div>
     </div>
+--}}
+    
+    {{#each vcs}}
+        <div class="cell medium-4">
+      <div class="card">
+        <div class="card-section">
+          <a href= "{{this.dataValues.vcWebsite}}"><img src="assets/img/{{this.dataValues.vcLogo}}" alt="logo" width="600" height="440"></a> 
+          <p>{{this.dataValues.vcName}}</p>
+          <a href= "{{this.dataValues.vcWebsite}}"><p>{{this.dataValues.vcWebsite}}</p></a>
+          <p>{{this.dataValues.vcCity}}</p>
+          <p>{{this.dataValues.vcState}}</p>
+          <p>{{this.dataValues.vcIndustries}}</p>
+          <p>{{this.dataValues.vcStage}}</p>
+        </div>
+        <div class="card-divider">
+        </div>
+      </div>
+    </div>
+  {{/each}}
+
   </div>
 </div>
 
@@ -110,30 +135,18 @@
     </tr>
   </thead>
   <tbody>
-    <tr class="table-expand-row" data-open-details>
-      <td>Luna Ferregani</td>
-      <td>luna@gmail.com</td>
-      <td>Milan</td>
-      <td>Italy</td>
-      <td>Fashion Design / Tech</td>
-      <td>1</td>
-      <td>2nd lead process<span class="expand-icon"></span></td>
-    </tr>
+   
+  {{#each vcs}}
 
-    <tr class="table-expand-row-content">
-      <td colspan="8" class="table-expand-row-nested">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, 
-          adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?</p>
-      </td>
-    </tr>
     <tr class="table-expand-row" data-open-details>
-      <td>Michael Blaun</td>
-      <td>mickael@gmail.com</td>
-      <td>New york</td>
-      <td>USA</td>
-      <td>Developer</td>
-      <td>2</td>
-      <td>scheduled <span class="expand-icon"></span></td>
+      <td>{{this.dataValues.vcName}}</td>
+      <td>{{this.dataValues.vcWebsite}}</td>
+      <td>{{this.dataValues.vcCity}}</td>
+      <td>{{this.dataValues.vcState}}</td>
+      <td>{{this.dataValues.vcIndustries}}</td>
+      <td>{{this.dataValues.vcState}}</td>
+      <td>{{this.dataValues.vcLeadc}}</td>
+      <td>More Information <span class="expand-icon"></span></td>
     </tr>
 
     <tr class="table-expand-row-content">
@@ -144,131 +157,7 @@
       </td>
     </tr>
 
-    <tr class="table-expand-row" data-open-details>
-      <td>Bruce Jackson</td>
-      <td>bruce@gmail.com</td>
-      <td>USA</td>
-      <td>LA</td>
-      <td>Marketing</td>
-      <td>1</td>
-      <td>carried over <span class="expand-icon"></span></td>
-    </tr>
-
-    <tr class="table-expand-row-content">
-      <td colspan="8" class="table-expand-row-nested">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam,
-           adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?</p>
-      </td>
-      </td>
-    </tr>
-
-    <tr class="table-expand-row" data-open-details>
-      <td>Kevin Lang</td>
-      <td>kevina@gmail.com</td>
-      <td>Milan</td>
-      <td>Italy</td>
-      <td>Tech</td>
-      <td>1</td>
-      <td>carried over <span class="expand-icon"></span></td>
-    </tr>
-
-    <tr class="table-expand-row-content">
-      <td colspan="8" class="table-expand-row-nested">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam,
-           adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?</p>
-      </td>
-      </td>
-    </tr>
-
-    <tr class="table-expand-row" data-open-details>
-      <td>Leo Ferregani</td>
-      <td>luna@gmail.com</td>
-      <td>USA</td>
-      <td>New York</td>
-      <td>Tech</td>
-      <td>1</td>
-      <td>carried over <span class="expand-icon"></span></td>
-    </tr>
-
-    <tr class="table-expand-row-content">
-      <td colspan="8" class="table-expand-row-nested">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam,
-           adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?</p>
-      </td>
-      </td>
-    </tr>
-
-    <tr class="table-expand-row" data-open-details>
-      <td>willian Ferrer</td>
-      <td>willian@gmail.com</td>
-      <td>LA</td>
-      <td>USA</td>
-      <td>Fashion Design / Tech</td>
-      <td>1</td>
-      <td>carried over <span class="expand-icon"></span></td>
-    </tr>
-
-    <tr class="table-expand-row-content">
-      <td colspan="8" class="table-expand-row-nested">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, 
-          adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?</p>
-      </td>
-      </td>
-    </tr>
-
-    <tr class="table-expand-row" data-open-details>
-      <td>Luna Ferregani</td>
-      <td>luna@gmail.com</td>
-      <td>Milan</td>
-      <td>Italy</td>
-      <td>Fashion Design / Tech</td>
-      <td>1</td>>
-      <td>paid <span class="expand-icon"></span></td>
-    </tr>
-
-    <tr class="table-expand-row-content">
-      <td colspan="8" class="table-expand-row-nested">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam,
-          adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?</p>
-      </td>
-      </td>
-    </tr>
-
-    <tr class="table-expand-row" data-open-details>
-      <td>Luna Ferregani</td>
-      <td>luna@gmail.com</td>
-      <td>Milan</td>
-      <td>Italy</td>
-      <td>Fashion Design / Tech</td>
-      <td>1</td>
-      <td>carried over <span class="expand-icon"></span></td>
-    </tr>
-
-    <tr class="table-expand-row-content">
-      <td colspan="8" class="table-expand-row-nested">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, 
-          adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?</p>
-      </td>
-      </td>
-    </tr>
-
-    <tr class="table-expand-row" data-open-details>
-      <td>Luna Ferregani</td>
-      <td>luna@gmail.com</td>
-      <td>Milan</td>
-      <td>Italy</td>
-      <td>Fashion Design / Tech</td>
-      <td>1</td>
-      <td>carried over <span class="expand-icon"></span></td>
-    </tr>
-
-    <tr class="table-expand-row-content">
-      <td colspan="8" class="table-expand-row-nested">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque unde quaerat reprehenderit ipsa ipsam, 
-          adipisci facere repellendus impedit at, quisquam dicta optio veniam quia nesciunt, inventore quod in neque magni?</p>
-      </td>
-      </td>
-    </tr>
+  {{/each}}
 
   </tbody>
 </table>
@@ -276,6 +165,7 @@
 <div style="margin-bottom: 90px"></div>
 
 {{!-- /*---------------end of table------------------*/  --}}
+
 
  <script src="/script/browser.js"></script>
 
