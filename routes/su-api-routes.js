@@ -53,7 +53,7 @@ module.exports = (app) => {
       console.log("Something");
       console.log("these are the profiles", db.startupProfiles);
       console.log("Data is:", data);
-      res.render("startup", { startupProfile: data });
+      res.render("client", { startupProfile: data });
     });
   });
 
