@@ -14,8 +14,6 @@ module.exports = (app) => {
 
   app.get("/register1", (req, res) => res.render("register1-vc"));
 
-  app.get("/register2", (req, res) => res.render("register2-startups"));
-
   // app.get("/blog", (req, res) => res.render("blog"));
 
   app.get("/browser", function (req, res) {
@@ -27,8 +25,9 @@ module.exports = (app) => {
 
   app.get("/vc", (req, res) => res.render("vc"));
 
-  app.get("/startup", (req, res) => res.render("startup"));
-  app.get("/login", (req, res) => res.render("login-signup"));
+  app.get("/client", (req, res) => res.render("client"));
+
+  // app.get("/login", (req, res) => res.render("login-signup"));
 
   app.get("/blog", (req, res) =>
     res.sendFile(path.join(__dirname, "../public/blog.html"))

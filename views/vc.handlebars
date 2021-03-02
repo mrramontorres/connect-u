@@ -4,7 +4,7 @@
 
     <nav class="hover-underline-menu" data-menu-underline-from-center>
         <ul class="menu align-center">
-          <li><a href="/">Home</a></li>
+          {{!-- <li><a href="/">Home</a></li> --}}
           <li><a href="/browser">browser</a></li>
           <li><a href="/vc">VC</a></li>
           <li><a href="/startup">Startup</a></li>
@@ -19,40 +19,39 @@
 
 {{!-- /*-------------right image ----------------*/ --}}
 
-<div class="row align-center">
-  <div class="product-image-gallery">
-    <img class="pdp-product-image" id="main-product-image" src="assets/img/circleimg1.png" text="imag-1" width="650" height="650" alt="">
-    <br>
-    <ul class="menu product-thumbs align-center">
-      <li> <a class="sim-thumb" data-image="assets/img/circleimg1.png" text="imag-1" width="650" height="650"><img src="assets/img/circleimg1.png" width="50" height="50" alt=""></a> </li>
-      <li> <a class="sim-thumb" data-image="assets/img/blackcircle2.png"  text="imag-2"  width="650" height="650"><img src="assets/img/blackcircle2.png" width="50" height="50" alt=""></a> </li>
-      <li> <a class="sim-thumb" data-image="assets/img/officeimg3.png"  text="imag-3" width="650" height="650"><img src="assets/img/officeimg3.png" width="50" height="50" alt=""></a> </li>
-    </ul>
-  </div>
-</div>
-
+  <di class="grid-x"style="text-align:center">
+    <div class="cell align-selfmiddle product-image-gallery">
+       <img class="pdp-product-image" id="main-product-image" src="assets/img/aquaspiral2.jpg" text="imag-1" width="550" height="550" alt="">
+                 <br>
+      <ul class="menu product-thumbs align-center">
+        <li> <a class="sim-thumb" data-image="assets/img/circleimg1.png" text="imag-1" width="650" height="650"><img src="assets/img/circleimg1.png" width="50" height="50" alt=""></a> </li>
+        <li> <a class="sim-thumb" data-image="assets/img/blackcircle2.png"  text="imag-2"  width="650" height="650"><img src="assets/img/blackcircle2.png" width="50" height="50" alt=""></a> </li>
+        <li> <a class="sim-thumb" data-image="assets/img/officeimg3.png"  text="imag-3" width="650" height="650"><img src="assets/img/officeimg3.png" width="50" height="50" alt=""></a> </li>
+      </ul>
+    </div>
+  </di>
           <div style="margin-bottom: 90px"></div>
 
   {{!-- /*-------------middle start----------------*/ --}}
 
-    <div class="row top-margin" style="text-align:center">
-      <div class="column align-self-middle">
+    <div class="grid-x" style="text-align:center">
+      <div class="cell align-self-middle">
         <div class="callout callout-hover-reveal" data-callout-hover-reveal>
           <div class="callout-body">
-            <h2> All Startup with same VC Industries </h2>
-            <!-- <p>I'll show you Bill Murray in the callout footer.</p> -->
+                          <h2> VC </h2>
+            <h3> All Startup with same VC Industries </h3>
+                         <h4>VC Table</h4> 
           </div>
         </div>
       </div>
     </div>
 
   {{!-- /*-------------middle end----------------*/ --}}
-     
-   
-    
+
+  
   {{!-- /*---------------start of table------------------*/ --}}
     
-    <table class="table-expand" id="vc-data">
+  <table class="table-expand" id="vc-data">
   <thead>
     <tr class="table-expand-row">
       <th width="150">Name</th>
@@ -234,4 +233,4 @@
        {{!-- /*---------------end of table------------------*/ --}}
 
   
-    <script src="/script/vc.js"></script>
+    <script src="/js/vc.js"></script>

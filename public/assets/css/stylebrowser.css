@@ -1,68 +1,52 @@
-
 /*---------Browser navbar--use in VC AND STARTUP --------------*/
 
 .hover-underline-menu {
-    width: 100%;
-  }
+  width: 100%;
+}
+
+.hover-underline-menu .menu {
+  background-color: #2C3840;
+}
+
+.hover-underline-menu .menu a {
+  color: #fcc9b9;
+  padding: 1.2rem 1.5rem;
+}
+
+.hover-underline-menu .menu .underline-from-center {
+  position: relative;
+}
+
+.hover-underline-menu .menu .underline-from-center::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - 0.125rem);
+  border-bottom: 0.125rem solid  #b8255a;;
+  left: 50%;
+  right: 50%;
+  transition: all 0.5s ease;
+}
+
+.hover-underline-menu .menu .underline-from-center:hover::after {
+  left: 0;
+  right: 0;
+  transition: all 0.5s ease;
+}
   
-  .hover-underline-menu .menu {
-    background-color: #2C3840;
-  }
-  
-  .hover-underline-menu .menu a {
-    color: #fefefe;
-    padding: 1.2rem 1.5rem;
-  }
-  
-  .hover-underline-menu .menu .underline-from-center {
-    position: relative;
-  }
-  
-  .hover-underline-menu .menu .underline-from-center::after {
-    content: "";
-    position: absolute;
-    top: calc(100% - 0.125rem);
-    border-bottom: 0.125rem solid #fefefe;
-    left: 50%;
-    right: 50%;
-    transition: all 0.5s ease;
-  }
-  
-  .hover-underline-menu .menu .underline-from-center:hover::after {
-    left: 0;
-    right: 0;
-    transition: all 0.5s ease;
-  }
-  
-  
-  /* @media screen and (max-width: 1024px) {
-    .no-js .top-bar {
-      display: none;
-    }
-    
-    #top-bar-sticky-logo {
-      font-size: 16px;
-    }
-  }
-  
-  @media print, screen and (min-width: 1024px) {
-    .no-js .title-bar {
-      display: none;
-    }
-  } */
   
 /*--------------end of browser-------------*/
   
   
   
 /*-----------------image card at Broiwser----------------*/
-body {
+
+/* body {
   font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   color: #333;
   background-color: #fff;
-}
+} */
   
 #vc-data{
     width: 80%;
@@ -91,67 +75,67 @@ body {
   
   
   
-/*-------briowser table----*/
+/*------- table----*/
 
 .table-expand {
-    margin-top: 5rem;
+  margin-top: 5rem;
 }
-  
+
 .table-expand td {
-    color: #8a8a8a;
+  color: #8a8a8a;
 }
-  
+
 .table-expand tr {
-    border: 1px solid #e6e6e6;
+  border: 1px solid #e6e6e6;
 }
-  
+
 .table-expand .text-right {
-    padding-right: 3rem;
+  padding-right: 3rem;
 }
-  
+
 .table-expand-row.is-active .expand-icon::after {
-    content: '-';
+  content: '-';
 }
-  
+
 .table-expand-row .expand-icon::after {
-    content: '+';
-    float: right;
+  content: '+';
+  float: right;
 }
-  
+
 .table-expand-row-content {
-    display: none;
+  display: none;
 }
-  
+
 .table-expand-row-content.is-active {
-    display: table-row;
-    -webkit-animation: fadeIn ease-in 1;
-            animation: fadeIn ease-in 1;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-    -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
+  display: table-row;
+  -webkit-animation: fadeIn ease-in 1;
+          animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
-  
+
 .table-expand-row-nested {
-    background-color: #e6e6e6;
+  background-color: #e6e6e6;
 }
-  
+
 @-webkit-keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-  
+
 @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-  
-/*-------briowser table end----*/
+
+/*-------table end----*/

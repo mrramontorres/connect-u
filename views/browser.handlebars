@@ -1,10 +1,11 @@
 
  <link rel="stylesheet" href="/assets/css/stylebrowser.css">
  
+   
 
-<nav class="hover-underline-menu" data-menu-underline-from-center>
+     <nav class="hover-underline-menu" data-menu-underline-from-center>
         <ul class="menu align-center">
-          <li><a href="/">Home</a></li>
+          {{!-- <li><a href="/">Home</a></li> --}}
           <li><a href="/browser">browser</a></li>
           <li><a href="/vc">VC</a></li>
           <li><a href="/startup">Startup</a></li>
@@ -102,12 +103,12 @@
   </div>
 </div>
 
-    <div style="margin-bottom: 90px"></div>
+  <div style="margin-bottom: 90px"></div>
 
 {{!-- /*-------------middle start----------------*/ --}}
 
-<div class="row top-margin" style="text-align:center">
-  <div class="column align-self-middle">
+<div class="grid-x" style="text-align:center">
+  <div class="cell  align-self-middle">
     <div class="callout callout-hover-reveal" data-callout-hover-reveal>
       <div class="callout-body">
         <h2> All VC </h2>
@@ -116,13 +117,16 @@
     </div>
   </div>
 </div>
-{{!-- /*-------------middle end----------------*/ --}}
 
+ {{!-- /*-------------middle end----------------*/ --}}
+
+  
 <div style="margin-bottom:20px"></div>
 
-{{!-- /*------------------table----------------*/ --}}
 
-<table class="table-expand" id="vc-data">
+  {{!-- /*---------------start of table------------------*/ --}}
+  
+<table class="table-expand " id="vc-data" class="grid-x">
   <thead>
     <tr class="table-expand-row">
       <th width="150">Name</th>
@@ -162,12 +166,14 @@
   </tbody>
 </table>
 
-<div style="margin-bottom: 90px"></div>
-
-{{!-- /*---------------end of table------------------*/  --}}
 
 
- <script src="/script/browser.js"></script>
+  <div style="margin-bottom: 90px"></div>
+
+  
+
+
+ <script src="/js/browser.js"></script>
 
 
 
