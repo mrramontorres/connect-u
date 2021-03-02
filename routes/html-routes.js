@@ -37,7 +37,7 @@ module.exports = (app) => {
   // second route loads second.html
   app.get("/cms", (req, res) =>
     //console.log("GET second html not read yet")
-    res.sendFile(path.join(__dirname, "../views/cms.html"))
+    res.sendFile(path.join(__dirname, "../public/cms.html"))
   );
 
   // third route loads third.html
