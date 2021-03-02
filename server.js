@@ -39,7 +39,7 @@ htmlRouter(app);
 vcRouter(app);
 suRouter(app);
 postRouter(app);
-userRoutes(app)
+userRoutes(app);
 
 // Syncing our sequelize models and then starting our Express app
 db.sequelize.sync({ force: false }).then(() => {

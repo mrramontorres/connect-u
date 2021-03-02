@@ -1,62 +1,41 @@
 module.exports = (sequelize, DataTypes) => {
-  const Startup = sequelize.define("startup_profile", {
-    startupName: {
+  const startupProfiles = sequelize.define("startupProfiles", {
+    startup_name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1, 100],
       },
     },
-    startupWebsite: {
+    startup_website: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1, 100],
       },
     },
-    startupCity: {
+    startup_city: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1, 100],
       },
     },
-    startupState: {
+    startup_state: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1, 100],
       },
     },
-    startupIndustry: {
+    startup_industry: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1, 100],
       },
     },
-    startupStage: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1, 100],
-      },
-    },
-    startupNotes: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1],
-      },
-    },
-    startupStatus: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1, 100],
-      },
-    },
-    startupProfileId: {
+    startup_stage: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -65,10 +44,10 @@ module.exports = (sequelize, DataTypes) => {
     },
   });
 
-  Startup.associate = (models) => {
+  startupProfiles.associate = (models) => {
     // Associating Author with Posts
     // When an Author is deleted, also delete any associated Posts
-    Startup.hasMany(models.Post, {
+    startupProfiles.hasMany(models.Post, {
       onDelete: "cascade",
     });
   };
@@ -82,5 +61,5 @@ module.exports = (sequelize, DataTypes) => {
   //     });
   //   };
 
-  return Startup;
+  return startupProfiles;
 };

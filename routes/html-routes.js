@@ -30,8 +30,6 @@ module.exports = (app) => {
       console.log(vcs);
       res.render("browser", {vcs: vcs});
     });
-
-
   });
 
   app.get("/vc", (req, res) =>

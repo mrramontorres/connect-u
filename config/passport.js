@@ -1,5 +1,6 @@
 var passport = require("passport");
 var LocalStrategy = require("passport-local").Strategy;
+const timestamp = require("time-stamp");
 
 var db = require("../models");
 
@@ -32,7 +33,7 @@ passport.use(new LocalStrategy(
       return done(null, dbUser);
     });
     // require("log-timestamp");
-    console.log("After log-timestamp");
+    console.log(timestamp());
   },
 ));
 
