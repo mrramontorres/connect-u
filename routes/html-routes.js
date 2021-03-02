@@ -30,8 +30,6 @@ module.exports = (app) => {
       console.log(vcs);
       res.render("browser", {vcs: vcs});
     });
-
-
   });
 
   app.get("/vc", (req, res) =>
@@ -41,6 +39,7 @@ module.exports = (app) => {
   app.get("/startup", (req, res) =>
     res.render("startup")
   );
+  
   app.get("/login", (req, res) => res.render("login-signup"));
 
   app.get("/blog", (req, res) =>

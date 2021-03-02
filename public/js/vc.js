@@ -22,6 +22,7 @@
         $(this).next().toggleClass('is-active');
         $(this).toggleClass('is-active');
       });
+      
     /*-------------image---------------*/  
   
     $('.sim-thumb').on('click', function() {
