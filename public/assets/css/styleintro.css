@@ -34,8 +34,8 @@
   }
   
   .topbar-responsive .menu .topbar-responsive-button {
-    color: #ebf6f7;
-    border-color: #ebf6f7;
+    color: #fcc9b9;
+    border-color: #fcc9b9;
     border-radius: 5000px;
     transition: color 0.15s ease-in, border-color 0.15s ease-in;
   }
@@ -143,6 +143,9 @@
   }
   
   /* @media all and (max-width: 700px){
+    .hero1 {
+    height: 700px;
+    width: 100%;
 
   } */
 
