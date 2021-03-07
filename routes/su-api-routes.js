@@ -51,7 +51,7 @@ module.exports = (app) => {
       }),
       db.startupProfiles.findAll({}).then((data) => {
         console.log("Something");
-        console.log("these are the profiles", db.startupProfiles);
+        // console.log("these are the profiles", db.startupProfiles);
         console.log("Data is:", data);
         res.render("client", { startupProfile: data });
       });

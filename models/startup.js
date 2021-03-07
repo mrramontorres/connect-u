@@ -1,3 +1,4 @@
+
 module.exports = (sequelize, DataTypes) => {
   const startupProfiles = sequelize.define("startupProfiles", {
     startup_name: {
