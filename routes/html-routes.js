@@ -25,6 +25,8 @@ module.exports = (app) => {
 
   app.get("/client", (req, res) => res.render("client"));
 
+  app.get("/members", (req, res) => res.render("register2-startups"));
+
   // app.get("/login", (req, res) => res.render("login-signup"));
 
   app.get("/blog", (req, res) =>
